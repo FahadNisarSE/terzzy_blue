@@ -1,0 +1,9 @@
+export { default as Image } from './Image';
+export { default as Header } from './Header';
+export { default as Navbar } from './Navbar';
+export { default as TypingHeading } from './TypingHeading';
+export { default as NavDot } from './NavDot';
+export { default as Carousel } from './Carousel'
+export { default as Contact } from './Contact'
+export { default as BlurImage } from './BlurImage';
+export { default as PageLoader } from './PageLoader';

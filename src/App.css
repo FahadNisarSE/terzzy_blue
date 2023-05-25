@@ -1,0 +1,375 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-padding-top: 200px;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Variable";
+  src: local("ClashDisplay-Variable"),
+    url("/src/assets/ClashDisplay-Variable.ttf") format("truetype-variations");
+  font-weight: 400, 500, 600, 800, 900;
+  font-style: normal;
+}
+
+body {
+  font-family: "ClashDisplay-Variable";
+  font-style: var(--my-font-style, normal);
+
+  max-width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  gap: 1rem;
+  zoom: reset;
+}
+
+/* FAQ ANIMATION */
+
+.faqanswerout {
+  animation: faqanswerout 0.5s ease-in;
+  transition: all 0.5s ease-in-out;
+}
+
+.faqanswerin {
+  animation: faqanswerin 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes faqanswerout {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes faqanswerin {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/* Wide word spacing */
+.word-wider {
+  word-spacing: 0.3em;
+}
+
+/* INFINITE HORIZONTAL STRIP SCROLL */
+.mobile-strip-scroll-a {
+  animation: mobileStripA 10s infinite backwards;
+  animation-timing-function: linear;
+}
+
+@keyframes mobileStripA {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+/* MOBILE STRIP SCROLL */
+.mobile-strip-scroll {
+  animation: mobileStrip 5s infinite both;
+  animation-timing-function: linear;
+}
+
+@keyframes mobileStrip {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+/* INFINITE STRIP SCROLL */
+.infinite-strip-scroll {
+  animation: infiniteStrip 5s infinite both;
+  animation-timing-function: linear;
+}
+
+@keyframes infiniteStrip {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+/* INFITE SCROLLING FOR BRANDS */
+.infinite-brand-scroll {
+  animation: scrollBrand 7s infinite both;
+  animation-timing-function: linear;
+}
+
+/* INFINITE TEXT BRANDS ANIMATION */
+@keyframes scrollBrand {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.infinite-scroll {
+  animation: scrollText 7s infinite both;
+  animation-timing-function: linear;
+}
+
+/* INFINITE TEXT SCROLLING ANIMATION */
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Gradient that will be used as bg for headings */
+.headings-gradient {
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.headings-gradient-2 {
+  background: linear-gradient(90deg, #888888 0%, #414345 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* I need to modify the gradient when internet is better */
+.radial-bg-gradient {
+  background-image: linear-gradient(
+    to right,
+    #2325269a 0%,
+    #414345 51%,
+    #23252694 100%
+  );
+}
+
+.glass-bg {
+  background: rgba(5, 5, 5, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* centering a absolute element */
+.center-absolute {
+  position: absolute;
+  inset: auto;
+  z-index: 100;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* section clothing and character layout */
+.clothing-layout {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "clothing-top"
+    "clothing-bottom"
+    "characters";
+}
+
+.clothing-top {
+  grid-area: clothing-top;
+}
+
+.clothing-bottom {
+  grid-area: clothing-bottom;
+}
+.characters {
+  grid-area: characters;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+/* End of the Character Layout */
+
+/* START OF ABOUT LAYOUT */
+.about-layout {
+  grid-template-areas:
+    "about"
+    "us"
+    "about-banner"
+    "customer"
+    "statistics";
+}
+
+.about {
+  grid-area: about;
+}
+.us {
+  grid-area: us;
+}
+.statistics {
+  grid-area: statistics;
+}
+.about-banner {
+  grid-area: about-banner;
+}
+.customer {
+  grid-area: customer;
+}
+
+/* END OF ABOUT LAYOUT */
+
+/* START OF FAQ LAYOUT */
+.faq-layout {
+  display: grid;
+  align-items: center;
+  grid-template-areas:
+    "specialist"
+    "mode"
+    "bookmarks";
+}
+
+.gray-container {
+  grid-area: gray-container;
+}
+.specialist {
+  grid-area: specialist;
+}
+.mode {
+  grid-area: mode;
+}
+.bookmarks {
+  grid-area: bookmarks;
+}
+
+/* END OF FAQ LAYOUT */
+
+/* CODE TO FORMAT THE SCROLLBAR */
+
+.hidden-scrollbar {
+  height: 300px;
+  width: 300px;
+
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.hidden-scrollbar::-webkit-scrollbar {
+  width: 0 !important; /* Safari and Chrome */
+}
+
+.hide-the-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+.hide-the-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgb(216, 216, 216);
+  border-radius: 6px;
+}
+.hide-the-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+@media screen and (min-width: 640px) {
+  html {
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+
+  body {
+    overflow-x: visible;
+    height: 100vh;
+    max-height: 100vh;
+    scroll-behavior: smooth;
+  }
+  ::-webkit-scrollbar {
+    width: auto;
+    height: auto;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(216, 216, 216);
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  /* CLOTHING LAYOUT FOR LARGE DEVICES*/
+  .clothing-layout {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+      "clothing-top characters"
+      "clothing-bottom clothing-bottom";
+  }
+
+  .clothing-top {
+    grid-area: clothing-top;
+  }
+
+  .clothing-bottom {
+    grid-area: clothing-bottom;
+  }
+  .characters {
+    grid-area: characters;
+  }
+
+  /* ABOUT lAYOUT FOR LARGE DEVICES */
+  .about-layout {
+    display: grid;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    grid-template-areas:
+      "about about statistics about-banner about-banner"
+      "us customer customer about-banner about-banner";
+  }
+
+  /* FAQ QUESTIONS LAYOUT */
+  .faq-layout {
+    display: grid;
+    grid-template-areas:
+      "gray-container specialist specialist"
+      "gray-container mode bookmarks";
+  }
+}
+
+.selection-none {
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.swiper-slide {
+  align-self: center;
+}
