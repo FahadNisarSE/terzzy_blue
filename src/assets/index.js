@@ -1,34 +1,33 @@
-import zero from './00.jpg';
-import one from './01.jpg';
-import two from './02.jpg';
-import three from './03.jpg';
-import four from './04.jpg';
-import five from './05.jpg';
-import six from './06.jpg';
-import seven from './07.jpg';
-import eight from './08.jpg';
-import nine from './09.jpg';
-import ten from './10.jpg';
-import eleven from './11.jpg';
-import twelve from './12.jpg';
-import thirteen from './13.jpg';
-import fourteen from './14.jpg';
-import fifteen from './15.jpg';
-import sixteen from './16.jpg';
-import seventeen from './17.jpg';
-import eighteen from './18.jpg';
-import nineteen from './19.jpg';
-import tweenty from './20.jpg';
-import tweentyOne from './21.jpg';
-import tweentyTwo from './22.jpg';
-import hoddie1 from './hoddie_01.jpg';
-import hoddie2 from './hoodie_02.jpg';
-import hoddie3 from './hoddie_03.jpg';
-import mannequin from './mannequin_in_coat03_00.jpg';
-import ren from './ren02.jpg';
-import si from './si_1.jpg';
-import si0 from './si_2.jpg';
-import outfit from './si_3.jpg';
+import zero from './00.webp';
+import one from './01.webp';
+import two from './02.webp';
+import three from './03.webp';
+import four from './04.webp';
+import five from './05.webp';
+import six from './06.webp';
+import seven from './07.webp';
+import eight from './08.webp';
+import nine from './09.webp';
+import ten from './10.webp';
+import eleven from './11.webp';
+import twelve from './12.webp';
+import thirteen from './13.webp';
+import fourteen from './14.webp';
+import fifteen from './15.webp';
+import sixteen from './16.webp';
+import seventeen from './17.webp';
+import eighteen from './18.webp';
+import tweenty from './20.webp';
+import tweentyOne from './21.webp';
+import tweentyTwo from './22.webp';
+import hoddie1 from './hoddie_01.webp';
+import hoddie2 from './hoodie_02.webp';
+import hoddie3 from './hoddie_03.webp';
+import mannequin from './mannequin_in_coat03_00.webp';
+import ren from './ren02.webp';
+import si from './si_1.webp';
+import si0 from './si_2.webp';
+import outfit from './si_3.webp';
 
 export {
     zero,
@@ -58,7 +57,6 @@ export {
     si,
     si0,
     outfit,
-    nineteen,
     tweenty,
     tweentyOne, 
     tweentyTwo
