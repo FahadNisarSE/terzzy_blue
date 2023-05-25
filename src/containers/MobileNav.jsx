@@ -56,7 +56,7 @@ export default function MobileNav() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className="fixed bottom-0 top-0 w-screen z-50 bg-black text-white flex flex-col gap-8 px-6 py-6 transition-all"
+      className="fixed bottom-0 top-0 w-screen z-[200] bg-black text-white flex flex-col gap-8 px-6 py-6 transition-all"
     >
       <motion.div
         variants={fadeIn("down", "spring", 1.5, 1.75)}
