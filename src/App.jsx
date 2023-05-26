@@ -49,10 +49,7 @@ export default function App() {
       }
       event.preventDefault();
 
-      element.scrollBy({
-        left: event.deltaY * 5,
-        behavior: "smooth",
-      });
+      element.scrollLeft += event.deltaY * 10;
     }
 
     window.addEventListener("wheel", handleScroll);
