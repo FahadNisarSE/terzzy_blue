@@ -13,6 +13,7 @@ import curved from "../../assets/col/curved.svg";
 import image3 from "../../assets/col/image-3.webp";
 import iphone from "../../assets/col/iphone.webp";
 import gunMetal from "../../assets/col/gunMetal.webp";
+import gunMetal2 from "../../assets/col/gunMetalalt.png";
 import Termos from "../../assets/col/Termos.webp";
 import rect11 from "../../assets/col/rect-11.webp";
 import rect12 from "../../assets/col/rect-12.webp";
@@ -73,7 +74,7 @@ export default function ProfessionalProducts() {
         className="flex flex-col items-center gap-4"
       >
         <NavDot active={active} />
-        <div className="flex gap-6 items-end sm:w-auto max-w-full sm:overflow-x-visible relative overflow-y-visible overflow-x-scroll">
+        <div className="flex gap-6 sm:relative items-end sm:w-auto max-w-full sm:overflow-x-visible overflow-y-visible overflow-x-scroll">
           <div className="sm:flex hidden items-center gap-3 absolute z-20 sm:-top-5 -top-20 sm:-left-2 left-10">
             <div className="text-5xl font-thin">+</div>
             <div
@@ -118,13 +119,17 @@ export default function ProfessionalProducts() {
             />
           </div>
           <motion.div
-            variants={fadeIn("right", "spring", 1 * 0.25, 1.75)}
+            variants={fadeIn(!isSmall && "right", "spring", 1 * 0.25, 1.75)}
             className="min-w-[250px] h-[250px] overflow-hidden rounded-2xl"
           >
-            <BlurImage src={gunMetal} alt="gun-Metal" />
+            <BlurImage
+              src={gunMetal}
+              secondaryImage={gunMetal2}
+              alt="gun-Metal"
+            />
           </motion.div>
           <motion.div
-            variants={fadeIn("right", "spring", 2 * 0.25, 1.75)}
+            variants={fadeIn(!isSmall && "right", "spring", 2 * 0.25, 1.75)}
             className="min-w-[218px] h-[230px] overflow-hidden rounded-2xl"
           >
             <BlurImage src={Termos} alt="Termos" />

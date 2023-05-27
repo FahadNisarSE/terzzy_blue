@@ -7,23 +7,7 @@ import { TypingHeading, NavDot } from "../../components";
 import { borderImage } from "../../assets/foot";
 import star from "../../assets/col/star.png";
 import video from "../../assets/video.mp4";
-
-const Container = () => (
-  <motion.div
-    variants={fadeIn("", "spring", 0.5, 1.75)}
-    className="sm:w-[580px] sm:h-[360px] min-w-[340px] sm:max-w-none sm:mx-0 mx-auto w-full overflow-hidden cursor-pointer sm:pr-0 pr-4"
-  >
-    <video
-      autoPlay
-      loop
-      muted
-      playsInline
-      className="w-full h-full object-cover rounded-xl"
-    >
-      <source src={video} type="video/mp4" />
-    </video>
-  </motion.div>
-);
+import { usePopupData, usePopupModal } from "../../Hooks/usePopupModal";
 
 import useSmallScreen from "../../Hooks/useSmallScreen";
 
@@ -35,6 +19,32 @@ export default function ThreeDVideo() {
     once: false,
     amount: isSmall ? 0.25 : 1,
   });
+  const { togglePopupModal } = usePopupModal();
+  const { modify } = usePopupData();
+
+  const Container = () => (
+    <motion.div
+      onClick={() => {
+        togglePopupModal(true);
+        modify({
+          src: video,
+          image: false,
+        });
+      }}
+      variants={fadeIn("", "spring", 0.5, 1.75)}
+      className="sm:w-[580px] sm:h-[360px] min-w-[340px] sm:max-w-none sm:mx-0 mx-auto w-full overflow-hidden cursor-pointer sm:pr-0 pr-4"
+    >
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="w-full h-full object-cover rounded-xl"
+      >
+        <source src={video} type="video/mp4" />
+      </video>
+    </motion.div>
+  );
 
   useEffect(() => {
     setActive(isInView);
@@ -47,7 +57,7 @@ export default function ThreeDVideo() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
-      id="3d-video"
+      id="three-d-video"
       className="sm:min-w-fit sm:h-auto sm:mb-0 mb-10 flex flex-col sm:gap-8 gap-4 sm:max-w-auto max-w-full sm:overflow-visible sm:w-auto w-full"
     >
       <NavDot active={active} />

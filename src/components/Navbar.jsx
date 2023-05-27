@@ -13,6 +13,7 @@ import {
 import { BsDash, BsDot } from "react-icons/bs";
 import { HiMail } from "react-icons/hi";
 import useToggleCarousel from "../Hooks/useToggleCarousel";
+import { usePopupModal } from "../Hooks/usePopupModal";
 
 const pageLinks = [
   {
@@ -63,7 +64,7 @@ const bookmarkLinks = [
     title: "GIF ANIMATION",
   },
   {
-    link: "#3d-video",
+    link: "three-d-video",
     title: "3D VIDEO",
   },
 ];
@@ -103,13 +104,14 @@ const NormalLinks = () => (
 export default function Navbar() {
   const { pathname } = useLocation();
   const { showCarousel } = useToggleCarousel();
+  const {showPopupModal} = usePopupModal();
 
   const activeLink = (link) => (pathname === link ? "text-black" : null);
 
   return (
     <nav
       className={`w-full flex items-center justify-between gap-2 lg:flex-nowrap flex-wrap sm:px-6 custom:py-6 custom:pt-11 custom:pb-5 sm:pt-10 sm:pb-0 py-6 text-[11px] text-lightgray sm:border-t ${
-        showCarousel ? "border-white" : "border-gray-500"
+        showCarousel || showPopupModal ? "border-white" : "border-gray-500"
       }`}
     >
       <div className="sm:flex hidden gap-4 items-start">
@@ -119,36 +121,40 @@ export default function Navbar() {
               key={page.title}
               className={`hover:text-black min-w-fit transition leading-[1] ${activeLink(
                 page.link
-              )} ${showCarousel && "text-white font-normal"}`}
+              )} ${showCarousel || showPopupModal && "text-white font-normal"}`}
             >
               <Link to={page.link}>{page.title}</Link>
             </div>
           ))}
         </div>
 
-        {pathname !== "/faq" && pathname !== "/about" && pathname !=="/collection" && (
-          <>
-            <BsDash className={`text-black ${showCarousel && "text-white"}`} />
-            <div className="sm:flex hidden items-center customsm:gap-2 gap-3 max-w-[820px] flex-wrap">
-              {bookmarkLinks.map((section, index) => (
-                <>
-                  <div
-                    className={`flex items-center text-[11px] leading-[1] font-semibold hover:text-black transition ${activeLink(
-                      section.link
-                    )} ${showCarousel && "text-white font-normal"}`}
-                  >
-                    <a href={section.link}>{section.title}</a>
-                  </div>
-                  {++index !== bookmarkLinks.length && (
-                    <BsDot
-                      className={`text-black ${showCarousel && "text-white"}`}
-                    />
-                  )}
-                </>
-              ))}
-            </div>
-          </>
-        )}
+        {pathname !== "/faq" &&
+          pathname !== "/about" &&
+          pathname !== "/collection" && (
+            <>
+              <BsDash
+                className={`text-black ${showCarousel || showPopupModal && "text-white"}`}
+              />
+              <div className="sm:flex hidden items-center customsm:gap-2 gap-3 max-w-[820px] flex-wrap">
+                {bookmarkLinks.map((section, index) => (
+                  <>
+                    <div
+                      className={`flex items-center text-[11px] leading-[1] font-semibold hover:text-black transition ${activeLink(
+                        section.link
+                      )} ${showCarousel || showPopupModal && "text-white font-normal"}`}
+                    >
+                      <a href={section.link}>{section.title}</a>
+                    </div>
+                    {++index !== bookmarkLinks.length && (
+                      <BsDot
+                        className={`text-black ${showCarousel || showPopupModal && "text-white"}`}
+                      />
+                    )}
+                  </>
+                ))}
+              </div>
+            </>
+          )}
       </div>
       <div
         className={`flex justify-center sm:min-w-fit items-center sm:gap-8 gap-10 sm:hidden lg:flex sm:mx-0 mx-auto`}

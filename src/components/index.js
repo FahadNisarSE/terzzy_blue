@@ -7,3 +7,4 @@ export { default as Carousel } from './Carousel'
 export { default as Contact } from './Contact'
 export { default as BlurImage } from './BlurImage';
 export { default as PageLoader } from './PageLoader';
+export { default as PopupModal } from './PopupModal';

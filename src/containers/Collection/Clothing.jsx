@@ -31,8 +31,11 @@ import useSmallScreen from "../../Hooks/useSmallScreen";
 export default function Clothing() {
   const [active, setActive] = useState(true);
   const container = useRef(null);
-  const {isSmall} = useSmallScreen();
-  const isInView = useInView(container, { once: false, amount: isSmall ? 0.25 : 1 });
+  const { isSmall } = useSmallScreen();
+  const isInView = useInView(container, {
+    once: false,
+    amount: isSmall ? 0.25 : 1,
+  });
 
   useEffect(() => {
     setActive(isInView);
@@ -58,47 +61,103 @@ export default function Clothing() {
           </div>
           <div className="flex items-center border-x min-h-[80px] border-black sm:pr-0 mr-2 max-w-lg overflow-x-hidden">
             <div className="infinite-brand-scroll flex gap-12 items-center sm:justify-normal justify-between">
-              <div className="sm:h-[30px] sm:min-w-fit h-[20px]">
-                <BlurImage src={brand1} alt="brands-image" />
+              <div className="sm:h-[30px] min-w-fit h-[20px]">
+                <img
+                  src={brand1}
+                  alt="brands-image"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="sm:h-[30px] min-w-fit h-[20px]">
-                <BlurImage src={brand2} alt="brands-image" />
+                <img
+                  src={brand2}
+                  alt="brands-image"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="sm:h-[30px] min-w-fit h-[20px]">
-                <BlurImage src={brand3} alt="brands-image" />
+                <img
+                  src={brand3}
+                  alt="brands-image"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="sm:h-[30px] min-w-fit h-[20px]">
-                <BlurImage src={brand4} alt="brands-image" />
+                <img
+                  src={brand4}
+                  alt="brands-image"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="sm:h-[30px] min-w-fit h-[20px]">
-                <BlurImage src={brand5} alt="brands-image" />
+                <img
+                  src={brand5}
+                  alt="brands-image"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="sm:h-[30px] min-w-fit h-[20px]">
-                <BlurImage src={brand6} alt="brands-image" />
+                <img
+                  src={brand6}
+                  alt="brands-image"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="sm:h-[30px] min-w-fit h-[20px]">
-                <BlurImage src={brand7} alt="brands-image" />
-              </div>
-              <div className="sm:h-[30px] sm:min-w-fit h-[20px]">
-                <BlurImage src={brand1} alt="brands-image" />
-              </div>
-              <div className="sm:h-[30px] min-w-fit h-[20px]">
-                <BlurImage src={brand2} alt="brands-image" />
+                <img
+                  src={brand7}
+                  alt="brands-image"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="sm:h-[30px] min-w-fit h-[20px]">
-                <BlurImage src={brand3} alt="brands-image" />
+                <img
+                  src={brand1}
+                  alt="brands-image"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="sm:h-[30px] min-w-fit h-[20px]">
-                <BlurImage src={brand4} alt="brands-image" />
+                <img
+                  src={brand2}
+                  alt="brands-image"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="sm:h-[30px] min-w-fit h-[20px]">
-                <BlurImage src={brand5} alt="brands-image" />
+                <img
+                  src={brand3}
+                  alt="brands-image"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="sm:h-[30px] min-w-fit h-[20px]">
-                <BlurImage src={brand6} alt="brands-image" />
+                <img
+                  src={brand4}
+                  alt="brands-image"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="sm:h-[30px] min-w-fit h-[20px]">
-                <BlurImage src={brand7} alt="brands-image" />
+                <img
+                  src={brand5}
+                  alt="brands-image"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="sm:h-[30px] min-w-fit h-[20px]">
+                <img
+                  src={brand6}
+                  alt="brands-image"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="sm:h-[30px] min-w-fit h-[20px]">
+                <img
+                  src={brand7}
+                  alt="brands-image"
+                  className="w-full h-full object-contain"
+                />
               </div>
             </div>
           </div>

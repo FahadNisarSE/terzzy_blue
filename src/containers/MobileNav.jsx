@@ -39,7 +39,7 @@ const bookmarkLinks = [
     title: "GIF ANIMATION",
   },
   {
-    link: "#3d-video",
+    link: "#three-d-video",
     title: "3D VIDEO",
   },
 ];
@@ -106,7 +106,7 @@ export default function MobileNav() {
       >
         {bookmarkLinks.map(({ link, title }, index) => (
           <>
-            <Link onClick={() => setShowSidebar(false)} to={link} key={title}>
+            <Link onClick={() => setShowSidebar(false)} to={'/' + link} key={title}>
               <div
                 className={`uppercase ${pathname !== link && "text-lightgray"}`}
               >

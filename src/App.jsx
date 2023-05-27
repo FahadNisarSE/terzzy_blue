@@ -7,13 +7,14 @@ const FAQ = lazy(() => import("./pages/FAQ"));
 const Contact = lazy(() => import("./components/Contact"));
 const Home = lazy(() => import("./pages/Home"));
 
-import { Header, Navbar, Carousel, PageLoader } from "./components";
+import { Header, Navbar, Carousel, PageLoader, PopupModal } from "./components";
 import MobileNav from "./containers/MobileNav";
 import "./App.css";
 
 import useToggleCarousel from "./Hooks/useToggleCarousel";
 import useToggleSidebar from "./Hooks/useToggleSidebar";
 import useSmallScreen from "./Hooks/useSmallScreen";
+import {usePopupModal} from "./Hooks/usePopupModal";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -21,6 +22,7 @@ export default function App() {
   const { showSidebar } = useToggleSidebar();
   const [screenSize, setScreenSize] = useState();
   const { setIsSmall, isSmall } = useSmallScreen();
+  const { showPopupModal } = usePopupModal();
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
@@ -79,6 +81,7 @@ export default function App() {
         {pathname !== "/contact" && <Header />}
         {showSidebar && <MobileNav />}
         {showCarousel && <Carousel />}
+        {showPopupModal && <PopupModal />}
       </header>
       <div className="sm:max-w-none max-w-screen sm:overflow-visible overflow-hidden">
         <Routes>

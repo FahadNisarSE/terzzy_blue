@@ -7,11 +7,14 @@ import { BsDot } from "react-icons/bs";
 
 import { staggerContainer, fadeIn } from "../../utils/motion";
 import video from "../../assets/FinalAnimation_01.mp4";
+import { usePopupData, usePopupModal } from "../../Hooks/usePopupModal";
 
 export default function EndingComponent() {
   const [isExpanded, setIsExpanded] = useState(false);
   const VideoRef = useRef(null);
   const containerRef = useRef(null);
+  const { togglePopupModal } = usePopupModal();
+  const { modify } = usePopupData();
 
   function scrollWindow() {
     window.scrollTo({
@@ -64,6 +67,13 @@ export default function EndingComponent() {
         }`}
       >
         <motion.div
+          onClick={() => {
+            togglePopupModal(true);
+            modify({
+              src: video,
+              image: false,
+            });
+          }}
           variants={fadeIn("", "spring", 0.5, 1.75)}
           className="sm:w-[580px] sm:h-[300px] min-w-[340px] sm:max-w-none max-w-[400px] sm:mx-0 mx-auto w-full overflow-hidden cursor-pointer sm:pr-0 pr-4 rounded-xl"
         >

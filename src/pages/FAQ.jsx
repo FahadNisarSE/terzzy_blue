@@ -202,7 +202,7 @@ export default function FAQ() {
               <img src={NavButton} alt="open menu" />
             </div>
             <div className="w-screen overflow-hidden bg-black h-[60px] flex items-center relative left-0 right-0 z-40 sm:hidden">
-              <p className="text-3xl text-white overflow-show font-semibold whitespace-nowrap mobile-strip-scroll-a tracking-widest heading-gradient">
+              <p className="text-3xl headings-gradient-2 overflow-show font-semibold whitespace-nowrap mobile-strip-scroll-a tracking-widest heading-gradient">
                 <span className="mr-4">3DVIDEO</span>{" "}
                 <span className="mr-4">BRANDS</span>{" "}
                 <span className="mr-4">TREZZY</span>{" "}

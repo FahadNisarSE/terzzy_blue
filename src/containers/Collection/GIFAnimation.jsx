@@ -18,14 +18,16 @@ const Image = ({ value }) => (
 );
 
 import useSmallScreen from "../../Hooks/useSmallScreen";
-import useToggleCarousel from "../../Hooks/useToggleCarousel";
+import { usePopupData, usePopupModal } from "../../Hooks/usePopupModal";
 
 export default function GIFAnimation() {
   const [active, setActive] = useState(true);
   const container = useRef(null);
   const { isSmall } = useSmallScreen();
-  const { setShowCarousel } = useToggleCarousel();
   const { pathname } = useLocation();
+  const { togglePopupModal } = usePopupModal();
+  const { modify } = usePopupData();
+
   const isInView = useInView(container, {
     once: false,
     amount: isSmall ? 0.25 : 1,
@@ -48,8 +50,14 @@ export default function GIFAnimation() {
       <NavDot active={active} />
       {!isSmall && <TypingHeading title="GIF ANIMATION" />}
       <motion.div
+        onClick={() => {
+          togglePopupModal(true);
+          modify({
+            src: gifAnimation,
+            image: false,
+          });
+        }}
         variants={fadeIn("", "spring", 0.5, 1.75)}
-        onClick={() => setShowCarousel(true)}
         className={`overflow-hidden sm:block ${
           pathname !== "/gif-animation" && "hidden"
         } w-full sm:w-[500px] h-[280px] rounded-2xl sm:mt-0 mt-4 cursor-pointer`}
@@ -58,7 +66,16 @@ export default function GIFAnimation() {
           <source src={gifAnimation} type="video/mp4" />
         </video>
       </motion.div>
-      <div className="flex gap-6 sm:hidden overflow-hidden sm:w-auto w-full sm:mx-0 mx-auto pr-4">
+      <div
+        onClick={() => {
+          togglePopupModal(true);
+          modify({
+            src: gifAnimation,
+            image: false,
+          });
+        }}
+        className="flex gap-6 sm:hidden overflow-hidden sm:w-auto w-full sm:mx-0 mx-auto pr-4"
+      >
         <video autoPlay loop muted className="w-full h-full rounded-lg">
           <source src={gifAnimation} type="video/mp4" />
         </video>

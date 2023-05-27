@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import {
   ProfessionalProducts,
@@ -13,9 +14,39 @@ import {
 } from "../containers/Collection";
 import useSmallScreen from "../Hooks/useSmallScreen";
 
-export default function Collection() {
+export default function Home() {
   const [screenSize, setScreenSize] = useState();
   const { isSmall, setIsSmall } = useSmallScreen();
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    const handleHashScroll = () => {
+      const hash = window.location.hash;
+      if (hash && isSmall) {
+        const target = document.querySelector(hash);
+        if (target) {
+          const offsetTop = target.offsetTop;
+          const windowHeight = window.innerHeight;
+          const scrollTo = offsetTop - 20;
+          window.scrollTo({
+            top: scrollTo,
+            behavior: "smooth",
+          });
+        }
+      }
+    };
+
+    // Call the handleHashScroll function on page load
+    handleHashScroll();
+
+    // Add event listener for hash changes
+    window.addEventListener("hashchange", handleHashScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("hashchange", handleHashScroll);
+    };
+  }, [hash]);
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);

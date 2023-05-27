@@ -14,13 +14,11 @@ import { staggerContainer, fadeIn } from "../../utils/motion";
 import { TypingHeading, NavDot, BlurImage } from "../../components";
 
 import useSmallScreen from "../../Hooks/useSmallScreen";
-import useToggleCarousel from "../../Hooks/useToggleCarousel";
 
 export default function Furniture() {
   const [active, setActive] = useState(true);
   const container = useRef(null);
   const { isSmall } = useSmallScreen();
-  const { setShowCarousel } = useToggleCarousel();
 
   const isInView = useInView(container, {
     once: false,
@@ -86,7 +84,6 @@ export default function Furniture() {
         </div>
         <div
           variants={fadeIn("right", "spring", 0.5, 1.75)}
-          onClick={() => setShowCarousel(true)}
           className="sm:w-[650px] sm:h-[240px] sm:block items-center rounded-3xl overflow-hidden relative"
         >
           <div className="absolute flex items-center justify-center z-20 bottom-0 -left-20 h-[78px] w-full bg-[#693F24] rotate-25">
