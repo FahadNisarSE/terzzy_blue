@@ -11,18 +11,10 @@ import { usePopupData, usePopupModal } from "../../Hooks/usePopupModal";
 
 import useSmallScreen from "../../Hooks/useSmallScreen";
 
-export default function ThreeDVideo() {
-  const [active, setActive] = useState(true);
-  const container = useRef(null);
-  const { isSmall } = useSmallScreen();
-  const isInView = useInView(container, {
-    once: false,
-    amount: isSmall ? 0.25 : 1,
-  });
+const Container = () => {
   const { togglePopupModal } = usePopupModal();
   const { modify } = usePopupData();
-
-  const Container = () => (
+  return (
     <motion.div
       onClick={() => {
         togglePopupModal(true);
@@ -32,7 +24,7 @@ export default function ThreeDVideo() {
         });
       }}
       variants={fadeIn("", "spring", 0.5, 1.75)}
-      className="sm:w-[580px] sm:h-[360px] min-w-[340px] sm:max-w-none sm:mx-0 mx-auto w-full overflow-hidden cursor-pointer sm:pr-0 pr-4"
+      className="sm:w-[580px] sm:h-[360px] min-w-[340px] sm:max-w-none sm:mx-0 mx-auto overflow-hidden cursor-pointer sm:pr-0 pr-4"
     >
       <video
         autoPlay
@@ -45,6 +37,16 @@ export default function ThreeDVideo() {
       </video>
     </motion.div>
   );
+};
+
+export default function ThreeDVideo() {
+  const [active, setActive] = useState(true);
+  const container = useRef(null);
+  const { isSmall } = useSmallScreen();
+  const isInView = useInView(container, {
+    once: false,
+    amount: isSmall ? 0.25 : 1,
+  });
 
   useEffect(() => {
     setActive(isInView);

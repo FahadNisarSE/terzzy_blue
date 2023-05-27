@@ -8,7 +8,6 @@ import ulList from "../../assets/col/ulList.svg";
 import AboutUs from "../../assets/col/aboutus.svg";
 import Switch from "../../assets/col/switch.svg";
 import smallAboutUs from "../../assets/col/smallaboutus.svg";
-import NavButton from "../../assets/NavButton.svg";
 import curved from "../../assets/col/curved.svg";
 import image3 from "../../assets/col/image-3.webp";
 import iphone from "../../assets/col/iphone.webp";
@@ -134,12 +133,6 @@ export default function ProfessionalProducts() {
           >
             <BlurImage src={Termos} alt="Termos" />
           </motion.div>
-          <div
-            onClick={() => setShowSidebar(true)}
-            className="sm:hidden block absolute z-5 cursor-pointer right-4"
-          >
-            <img src={NavButton} alt="open menu" />
-          </div>
         </div>
         <div className="relative mx-auto w-fit sm:block hidden">
           <TypingHeading title="PRODUCTS" />

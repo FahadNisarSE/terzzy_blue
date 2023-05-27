@@ -62,10 +62,14 @@ export default function MobileNav() {
         variants={fadeIn("down", "spring", 1.5, 1.75)}
         className="flex items-center justify-between"
       >
-        <h2 className="font-bold text-2xl">TERZZY</h2>
+        <Link to="/" onClick={() => setShowSidebar(false)}>
+          <h2 className="font-bold text-2xl">TERZZY</h2>
+        </Link>
         <div className="flex items-center text-xs font-semibold gap-2">
           GUARANTEE <br /> QUALITY
-          <img src={output} alt="output-button" />
+          <Link onClick={() => setShowSidebar(false)} to="/contact">
+            <img src={output} alt="output-button" />
+          </Link>
         </div>
       </motion.div>
       <div className="flex flex-col gap-2">
@@ -106,7 +110,11 @@ export default function MobileNav() {
       >
         {bookmarkLinks.map(({ link, title }, index) => (
           <>
-            <Link onClick={() => setShowSidebar(false)} to={'/' + link} key={title}>
+            <Link
+              onClick={() => setShowSidebar(false)}
+              to={"/" + link}
+              key={title}
+            >
               <div
                 className={`uppercase ${pathname !== link && "text-lightgray"}`}
               >
