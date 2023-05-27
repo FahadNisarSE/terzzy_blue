@@ -60,7 +60,9 @@ export default function Furniture() {
             alt="dummy Image"
             className="self-end w-10 h-10 xxs:block hidden"
           />
-          <BlurImage src={sect32} alt="Furniture" />
+          <div className="self-stretch object-left-top rounded-2xl overflow-hidden">
+            <BlurImage src={sect32} alt="Furniture" />
+          </div>
         </div>
         <div className="sm:flex hidden flex-col items-center gap-4">
           <motion.img
