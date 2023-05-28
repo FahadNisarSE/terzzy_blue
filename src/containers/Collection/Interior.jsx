@@ -45,7 +45,7 @@ export default function Interior() {
         variants={fadeIn("left", "spring", 0 * 0.5, 1.75)}
         className="w-full max-w-[500px] ml-auto sm:hidden block"
       >
-        <img
+        <BlurImage
           src={interiorBanner}
           alt="interior"
           className="w-full h-full object-cover"
