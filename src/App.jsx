@@ -1,5 +1,6 @@
 import { useState, Suspense, useEffect, lazy, useLayoutEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Collection = lazy(() => import("./pages/Collection"));
 const About = lazy(() => import("./pages/About"));
@@ -14,7 +15,7 @@ import "./App.css";
 import useToggleCarousel from "./Hooks/useToggleCarousel";
 import useToggleSidebar from "./Hooks/useToggleSidebar";
 import useSmallScreen from "./Hooks/useSmallScreen";
-import {usePopupModal} from "./Hooks/usePopupModal";
+import { usePopupModal } from "./Hooks/usePopupModal";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -77,6 +78,26 @@ export default function App() {
 
   return (
     <>
+      <Helmet>
+        <link
+          rel="preload"
+          as="font"
+          href="/src/assets/ClashDisplay-Variable.ttf"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
+        <style>
+          {`
+            @font-face {
+              font-family: "ClashDisplay-Variable";
+              src: local("ClashDisplay-Variable"),
+                url("/src/assets/ClashDisplay-Variable.ttf") format("truetype-variations");
+              font-weight: 400, 500, 600, 800, 900;
+              font-style: normal;
+            }
+          `}
+        </style>
+      </Helmet>
       <header>
         {pathname !== "/contact" && <Header />}
         {showSidebar && <MobileNav />}
