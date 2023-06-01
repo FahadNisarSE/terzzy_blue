@@ -45,7 +45,7 @@ export default function GIFAnimation() {
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
       id="gif-animation"
-      className="min-w-fit flex flex-col gap-4 sm:my-auto sm:w-auto w-full"
+      className="min-w-fit flex flex-col sm:gap-2 gap-4 sm:my-auto sm:w-auto w-full"
     >
       <NavDot active={active} />
       {!isSmall && <TypingHeading title="GIF ANIMATION" />}
@@ -83,7 +83,7 @@ export default function GIFAnimation() {
       <div className="sm:hidden block">
         <TypingHeading title="GIF ANIMATION" />
       </div>
-      <div className="flex sm:flex-row flex-col gap-8 sm:items-center justify-between mt-auto">
+      <div className="flex sm:flex-row flex-col gap-8 sm:items-center justify-between sm:-mt-3 mt-auto">
         {!isSmall ? <Image value="150px" /> : null}
         <motion.p
           variants={fadeIn("up", "tween", 0.2, 1)}

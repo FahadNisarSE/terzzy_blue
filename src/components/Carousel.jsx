@@ -91,7 +91,11 @@ export default function Contact() {
           : "md:w-[330px] md:h-[416px] w-[230px] h-[316px]"
       } rounded-2xl overflow-hidden cursor-pointer`}
     >
-      <BlurImage src={images[index].image} alt={images[index].alt} />
+      <BlurImage
+        src={images[index].image}
+        alt={images[index].alt}
+        noModal={true}
+      />
     </motion.div>
   );
 

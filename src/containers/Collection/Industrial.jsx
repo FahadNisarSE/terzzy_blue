@@ -31,7 +31,7 @@ export default function Industrial() {
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
       id="industrial"
-      className="sm:min-w-fit flex flex-col sm:gap-10 sm:max-w-auto max-w-full sm:w-auto w-full"
+      className="sm:min-w-fit flex flex-col sm:gap-16 sm:max-w-auto max-w-full sm:w-auto w-full"
     >
       <NavDot active={active} />
       <div className="relative flex sm:gap-8 gap-2 pb-16 sm:overflow-auto overflow-x-scroll sm:w-auto sm:mx-0 mx-auto">

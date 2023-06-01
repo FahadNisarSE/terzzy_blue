@@ -1,6 +1,7 @@
 {
   "name": "trezzy",
   "private": true,
+  "homepage": "http://terzzy.com",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

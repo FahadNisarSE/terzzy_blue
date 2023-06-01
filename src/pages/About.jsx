@@ -10,27 +10,42 @@ import brand7 from "../assets/col/brand7.svg";
 
 import aboutBanner from "../assets/abouts/about-banner.svg";
 import NavButton from "../assets/NavButton.svg";
-import { fadeIn, staggerContainer, textContainer, textVariant2 } from "../utils/motion";
+import {
+  fadeIn,
+  staggerContainer,
+  textContainer,
+  textVariant2,
+} from "../utils/motion";
 import { two } from "../assets";
 import { BlurImage } from "../components";
 
-import useToggleCarousel from "../Hooks/useToggleCarousel";
 import useToggleSidebar from "../Hooks/useToggleSidebar";
 
 export default function About() {
-  const {setShowCarousel} = useToggleCarousel();
-  const {setShowSidebar} = useToggleSidebar();
+  const { setShowSidebar } = useToggleSidebar();
 
   return (
-    <motion.main variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ amount: 0.25 }} className="about-layout max-h-full sm:overflow-visible overflow-hidden sm:min-w-fit pl-4">
-      <motion.div variants={textContainer} className="about headings-gradient sm:text-[300px] text-[48px] font-semibold sm:leading-[220px] leading-none tracking-wide sm:my-auto">
+    <motion.main
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ amount: 0.25 }}
+      className="about-layout max-h-full sm:overflow-visible overflow-hidden sm:min-w-fit pl-4"
+    >
+      <motion.div
+        variants={textContainer}
+        className="about headings-gradient sm:text-[300px] text-[48px] font-semibold sm:leading-[220px] leading-none tracking-wide sm:my-auto"
+      >
         {Array.from("ABOUT").map((letter, index) => (
           <motion.span variants={textVariant2} key={index}>
             {letter === " " ? "\u00A0" : letter}
           </motion.span>
         ))}
       </motion.div>
-      <motion.div variants={textContainer} className="us headings-gradient sm:text-[300px] text-[48px] font-semibold sm:leading-[220px] leading-none tracking-wide">
+      <motion.div
+        variants={textContainer}
+        className="us headings-gradient sm:text-[300px] text-[48px] font-semibold sm:leading-[220px] leading-none tracking-wide"
+      >
         {Array.from("US").map((letter, index) => (
           <motion.span variants={textVariant2} key={index}>
             {letter === " " ? "\u00A0" : letter}
@@ -86,7 +101,10 @@ export default function About() {
           </div>
         </div>
       </div>
-      <motion.div variants={fadeIn("up", "spring", 0.5, 1.75)} className="statistics sm:pr-0 pr-4 flex flex-col justify-between">
+      <motion.div
+        variants={fadeIn("up", "spring", 0.5, 1.75)}
+        className="statistics sm:pr-0 pr-4 flex flex-col justify-between"
+      >
         <p className="uppercase sm:w-[500px] sm:text-[13px] text-[10px] sm:text-left text-center">
           Our firm offers product design for different purposes, starting from
           the development phase, testing up to visualization for online stores,
@@ -95,11 +113,17 @@ export default function About() {
           visualizations, 3D rendering services are not the complete list of our
           competencies.
         </p>
-        <div onClick={() => setShowSidebar(true)} className="sm:hidden flex justify-end cursor-pointer">
+        <div
+          onClick={() => setShowSidebar(true)}
+          className="sm:hidden flex justify-end cursor-pointer"
+        >
           <img src={NavButton} alt="open menu" />
         </div>
         <div className="flex items-center justify-between">
-          <motion.div variants={fadeIn("top", "spring", 0.5, 1.75)} className="flex flex-col items-center gap-2 text-center">
+          <motion.div
+            variants={fadeIn("top", "spring", 0.5, 1.75)}
+            className="flex flex-col items-center gap-2 text-center"
+          >
             <h4 className="headings-gradient sm:text-3xl text-4xl font-extrabold">
               7
             </h4>
@@ -107,7 +131,9 @@ export default function About() {
               YEARS OF EXPERIENCE
             </p>
           </motion.div>
-          <motion.div variants={fadeIn("top", "spring", 0.5, 1.75)} className="flex flex-col items-center gap-2 text-center"
+          <motion.div
+            variants={fadeIn("top", "spring", 0.5, 1.75)}
+            className="flex flex-col items-center gap-2 text-center"
           >
             <h4 className="headings-gradient sm:text-3xl text-4xl font-extrabold">
               400+
@@ -116,7 +142,9 @@ export default function About() {
               SUCCESSFULL PROJECTS
             </p>
           </motion.div>
-          <motion.div variants={fadeIn("top", "spring", 0.5, 1.75)} className="flex flex-col items-center gap-2 text-center"
+          <motion.div
+            variants={fadeIn("top", "spring", 0.5, 1.75)}
+            className="flex flex-col items-center gap-2 text-center"
           >
             <h4 className="headings-gradient sm:text-3xl text-4xl font-extrabold">
               21
@@ -125,7 +153,10 @@ export default function About() {
           </motion.div>
         </div>
       </motion.div>
-      <motion.div onClick={() => setShowCarousel(true)} variants={fadeIn("", "spring", 1.25, 1.75)} className="about-banner relative sm:w-[800px] w-screen sm:bg-transparent bg-gray-200 sm:pb-[100px] overflow-hidden">
+      <motion.div
+        variants={fadeIn("", "spring", 1.25, 1.75)}
+        className="about-banner relative sm:w-[800px] w-screen sm:bg-transparent bg-gray-200 sm:pb-[100px] overflow-hidden"
+      >
         <div className="sm:block hidden">
           <BlurImage src={aboutBanner} alt="About Banner" />
         </div>

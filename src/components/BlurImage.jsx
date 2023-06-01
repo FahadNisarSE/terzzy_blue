@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { usePopupData, usePopupModal } from "../Hooks/usePopupModal";
 
-const BlurImage = ({ src, alt, cover, secondaryImage }) => {
+const BlurImage = ({ src, alt, cover, secondaryImage, noModal }) => {
   const [isLoading, setIsLoading] = useState(true);
   const { togglePopupModal } = usePopupModal();
   const { modify } = usePopupData();
@@ -11,12 +11,14 @@ const BlurImage = ({ src, alt, cover, secondaryImage }) => {
   return (
     <img
       onClick={() => {
-        togglePopupModal(true);
-        modify({
-          src: secondaryImage || src,
-          alt: alt,
-          image: true,
-        });
+        if (!noModal) {
+          togglePopupModal(true);
+          modify({
+            src: secondaryImage || src,
+            alt: alt,
+            image: true,
+          });
+        }
       }}
       src={src}
       alt={alt}

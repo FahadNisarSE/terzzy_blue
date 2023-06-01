@@ -20,7 +20,7 @@ export default function PopupModal() {
     >
       <motion.div
         variants={fadeIn("up", "spring", 0, 0.75)}
-        className="flex sm:flex-row flex-col sm:gap-4 gap:2"
+        className="flex sm:flex-row flex-col sm:gap-4 gap:2 sm:justify-center"
       >
         {image ? (
           <div className="max-h-[70vh] max-w-[80vw] sm:min-w-[500px] min-w-[90vw] overflow-hidden glass-bg p-4 rounded-lg">

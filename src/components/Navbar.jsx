@@ -64,7 +64,7 @@ const bookmarkLinks = [
     title: "GIF ANIMATION",
   },
   {
-    link: "three-d-video",
+    link: "#three-d-video",
     title: "3D VIDEO",
   },
 ];

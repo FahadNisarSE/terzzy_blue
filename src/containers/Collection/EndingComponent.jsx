@@ -38,33 +38,13 @@ export default function EndingComponent() {
       ref={containerRef}
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
-      className={`min-w-fit flex flex-col gap-4 mb-[80px] ${
+      className={`min-w-fit flex flex-col gap-4 sm:mb-10 mb-[80px] sm:pr-5 ${
         isExpanded ? "pr-8" : ""
       }`}
     >
       <motion.div
         variants={fadeIn("right", "tween", 0.2, 1)}
-        className="flex items-center gap-4 pl-4"
-      >
-        <img
-          src={leftarrow}
-          alt="left-arrow"
-          className="w-3 h-3 cursor-pointer"
-          onClick={() => handleArrowkeyClick(false)}
-        />
-        <BsDot className="text-black" />
-        <img
-          src={rightarrow}
-          alt="right-arrow"
-          className="w-3 h-3 cursor-pointer"
-          onClick={() => handleArrowkeyClick(true)}
-        />
-      </motion.div>
-      <motion.div
-        variants={fadeIn("right", "tween", 0.2, 1)}
-        className={`max-w-[150px] ${
-          !isExpanded ? "overflow-hidden" : "overflow-visible max-w-none"
-        }`}
+        className={`w-fit`}
       >
         <motion.div
           onClick={() => {
@@ -75,7 +55,7 @@ export default function EndingComponent() {
             });
           }}
           variants={fadeIn("", "spring", 0.5, 1.75)}
-          className="sm:w-[580px] sm:h-[300px] min-w-[340px] sm:max-w-none max-w-[400px] sm:mx-0 mx-auto w-full overflow-hidden cursor-pointer sm:pr-0 pr-4 rounded-xl"
+          className="sm:w-[580px] sm:h-[430px] min-w-[340px] sm:max-w-none max-w-[400px] sm:mx-0 mx-auto w-full overflow-hidden cursor-pointer sm:pr-0 pr-4 rounded-xl"
         >
           <video
             ref={VideoRef}

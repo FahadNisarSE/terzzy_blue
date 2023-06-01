@@ -146,7 +146,7 @@ export default function FAQ() {
             variants={fadeIn("right", "spring", 0.5, 1.75)}
             className="gray-container overflow-hidden h-[425px] w-[421px] bg-gray-200 rounded-e-2xl mr-10 sm:block hidden cursor-pointer"
           >
-            <BlurImage src={fifteen} alt="faq" />
+            <BlurImage src={fifteen} alt="faq" noModal={true} />
           </motion.div>
           <motion.div
             variants={textContainer}
