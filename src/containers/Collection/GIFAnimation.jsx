@@ -13,7 +13,7 @@ const Image = ({ value }) => (
     variants={fadeIn("", "tween", 1, 0.5)}
     className={`w-[${value}] h-[${value}] max-w-[200px]`}
   >
-    <BlurImage src={Gif_Plasma} alt="plasma_gif" />
+    <img src={Gif_Plasma} alt="plasma_gif" />
   </motion.div>
 );
 
