@@ -1,0 +1,7 @@
+User-Agent: *
+Disallow: 
+Allow: /
+Allow: /collection
+Allow: /faq
+Allow: /about
+Allow: /contact

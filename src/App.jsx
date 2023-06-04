@@ -6,7 +6,7 @@ const Collection = lazy(() => import("./pages/Collection"));
 const About = lazy(() => import("./pages/About"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const Contact = lazy(() => import("./components/Contact"));
-const Home = lazy(() => import("./pages/Home"));
+import Home from "./pages/Home";
 
 import { Header, Navbar, Carousel, PageLoader, PopupModal } from "./components";
 import MobileNav from "./containers/MobileNav";
