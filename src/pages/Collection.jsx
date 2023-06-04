@@ -66,7 +66,7 @@ export default function Collection() {
   return (
     <main className="flex items-center sm:h-auto h-[75vh] justify-center px-8">
       <Swiper
-        spaceBetween={isSmall ? 0 : 50}
+        spaceBetween={isSmall ? 0 : 0}
         slidesPerView={isSmall ? 1 : 3}
         navigation={true}
         modules={[Navigation]}
@@ -86,15 +86,21 @@ export default function Collection() {
                     : setMyActive(index)
                   : null;
                 return (
-                  <motion.div
-                    className={`${
-                      myActive === index
-                        ? "sm:h-[400px] w-full h-full sm:w-[400px]"
-                        : "sm:h-[200px] sm:w-[200px] w-full h-full"
-                    } pointer-events-none rounded-lg overflow-hidden mx-auto transition-all duration-1000`}
-                  >
-                    <BlurImage src={image.image} alt={image.alt} />
-                  </motion.div>
+                  <div className="">
+                    <motion.div
+                      className={`relative ${
+                        myActive === index
+                          ? "sm:h-[400px] w-full h-full sm:w-[400px] z-20"
+                          : "sm:w-[200px] sm:h-[200px] w-full h-full z-0"
+                      } ${
+                        index < myActive
+                          ? "mr-[40px]"
+                          : index > myActive && "sm:ml-[40px]"
+                      } pointer-events-none rounded-lg overflow-hidden mx-auto transition-all duration-1000`}
+                    >
+                      <BlurImage src={image.image} alt={image.alt} />
+                    </motion.div>
+                  </div>
                 );
               }}
             </SwiperSlide>

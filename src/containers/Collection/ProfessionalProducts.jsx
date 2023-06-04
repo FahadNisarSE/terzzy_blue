@@ -22,7 +22,6 @@ import { TypingHeading, NavDot, BlurImage } from "../../components";
 
 import useSmallScreen from "../../Hooks/useSmallScreen";
 import useToggleCarousel from "../../Hooks/useToggleCarousel";
-import useToggleSidebar from "../../Hooks/useToggleSidebar";
 import AnimatingBlob from "../../components/AnimatingBlob";
 
 export default function ProfessionalProducts() {
@@ -47,7 +46,6 @@ export default function ProfessionalProducts() {
   const [hovered, setHovered] = useState(0);
   const { isSmall } = useSmallScreen();
   const { setShowCarousel } = useToggleCarousel();
-  const { setShowSidebar } = useToggleSidebar();
 
   const isInView = useInView(container, {
     once: false,
@@ -148,7 +146,7 @@ export default function ProfessionalProducts() {
             <img
               src={Switch}
               alt="switch"
-              className="absolute sm:block hidden -top-[80%] -right-[60px] h-[150px]"
+              className="absolute sm:block hidden -top-[90%] -right-[50px] h-[150px]"
             />
             <motion.h1
               variants={fadeIn("", "tween", 0.25, 0.5)}
@@ -160,9 +158,15 @@ export default function ProfessionalProducts() {
           <div className="flex items-center sm:gap-8 gap-4 sm:mx-auto w-fit">
             <Link to="/about">
               <motion.img
-                className="min-w-[30px]"
+                className="min-w-[30px] sm:block hidden"
                 variants={fadeIn("", "tween", 0.25, 0.5)}
-                src={isSmall ? smallAboutUs : AboutUs}
+                src={AboutUs}
+                alt="about use"
+              />
+              <motion.img
+                className="min-w-[30px] sm:hidden"
+                variants={fadeIn("", "tween", 0.25, 0.5)}
+                src={smallAboutUs}
                 alt="about use"
               />
             </Link>

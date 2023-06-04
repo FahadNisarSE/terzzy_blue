@@ -23,7 +23,7 @@ const bookmarkLinks = [
     title: "CLOTHING",
   },
   {
-    link: "#clothing",
+    link: "#characters",
     title: "CHARACTERS",
   },
   {

@@ -48,7 +48,7 @@ const bookmarkLinks = [
     title: "CLOTHING",
   },
   {
-    link: "#clothing",
+    link: "#characters",
     title: "CHARACTERS",
   },
   {
@@ -105,15 +105,15 @@ const scrollToContainer = (e, targetId) => {
   e.preventDefault();
 
   console.log("Tagetid: ", targetId);
-  
+
   const targetSection = document.querySelector(targetId);
   console.log("Target Section : ", targetSection);
 
   const container = document.querySelector("html");
   console.log("Container : ", container);
-  
+
   console.log("Taget Section offset : ", targetSection.offsetLeft);
-  container.scrollLeft = targetSection.offsetLeft-20;
+  container.scrollLeft = targetSection.offsetLeft - 20;
 };
 
 export default function Navbar() {
@@ -158,6 +158,7 @@ export default function Navbar() {
                 {bookmarkLinks.map((section, index) => (
                   <>
                     <div
+                      key={section.title + index}
                       className={`flex items-center text-[11px] leading-[1] font-semibold hover:text-black transition ${activeLink(
                         section.link
                       )} ${

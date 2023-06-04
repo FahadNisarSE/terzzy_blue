@@ -34,7 +34,7 @@ export default function Industrial() {
       className="sm:min-w-fit flex flex-col sm:gap-16 sm:max-w-auto max-w-full sm:w-auto w-full"
     >
       <NavDot active={active} />
-      <div className="relative flex sm:gap-8 gap-2 pb-16 sm:overflow-auto overflow-x-scroll sm:w-auto sm:mx-0 mx-auto">
+      <div className="relative flex sm:gap-8 gap-2 pb-16 sm:overflow-auto overflow-x-scroll sm:max-w-none max-w-full sm:w-auto sm:mx-0 mx-auto">
         <motion.div
           variants={fadeIn("", "tween", 1, 0.5)}
           className="sm:w-[150px] sm:h-[150px] sm:block hidden object-cover"
@@ -55,13 +55,13 @@ export default function Industrial() {
         </motion.div>
         <motion.div
           variants={fadeIn("right", "spring", 0 * 0.5, 1.75)}
-          className="w-[200px] h-[200px] overflow-hidden rounded-lg sm:hidden block"
+          className="min-w-[200px] h-[200px] overflow-hidden rounded-lg sm:hidden block"
         >
           <BlurImage src={sect91} alt="industrial-images" />
         </motion.div>
         <motion.div
           variants={fadeIn("right", "spring", 1 * 0.5, 1.75)}
-          className="w-[200px] h-[200px] overflow-hidden rounded-3xl sm:hidden block"
+          className="min-w-[200px] h-[200px] overflow-hidden rounded-3xl sm:hidden block"
         >
           <BlurImage src={sect92} alt="industrial-images" />
         </motion.div>

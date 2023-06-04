@@ -65,7 +65,7 @@ export default function Home() {
 
   return (
     <main className="sm:h-screen sm:flex sm:items-center">
-      <div className="flex sm:flex-row flex-col items-center gap-20 sm:min-w-fit sm:max-h-[507px] sm:overflow-visible sm:pl-0 pl-4 sm:border-none border-l border-black sm:ml-0 ml-4">
+      <div className="flex sm:flex-row flex-col items-center gap-20 sm:min-w-fit sm:max-h-[507px] sm:overflow-visible sm:pl-0 pl-4 sm:border-none border-l border-black sm:ml-0 ml-4 sm:mb-8">
         <ProfessionalProducts />
         <Furniture />
         <Interior />

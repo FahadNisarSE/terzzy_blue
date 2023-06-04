@@ -144,13 +144,13 @@ export default function FAQ() {
           <motion.div
             onClick={() => setShowCarousel(true)}
             variants={fadeIn("right", "spring", 0.5, 1.75)}
-            className="gray-container overflow-hidden h-[425px] w-[421px] bg-gray-200 rounded-e-2xl mr-10 sm:block hidden cursor-pointer"
+            className="gray-container overflow-hidden h-[425px] w-[421px] bg-gray-200 rounded-e-2xl mr-2 sm:block hidden cursor-pointer"
           >
             <BlurImage src={fifteen} alt="faq" noModal={true} />
           </motion.div>
           <motion.div
             variants={textContainer}
-            className="specialist headings-gradient sm:text-[200px] text-[48px] font-semibold sm:leading-[150px] leading-none sm:p-0 px-4"
+            className="specialist headings-gradient sm:text-[180px] text-[48px] font-semibold sm:leading-[150px] leading-none sm:p-0 px-4"
           >
             {Array.from("SPECIALIST").map((letter, index) => (
               <motion.span variants={textVariant2} key={index}>
@@ -160,7 +160,7 @@ export default function FAQ() {
           </motion.div>
           <motion.div
             variants={textContainer}
-            className="mode headings-gradient sm:text-[200px] text-[48px] font-semibold sm:leading-[150px] leading-none sm:p-0 px-4"
+            className="mode headings-gradient sm:text-[180px] text-[48px] font-semibold sm:leading-[150px] leading-none sm:p-0 px-4"
           >
             {Array.from("MODE").map((letter, index) => (
               <motion.span variants={textVariant2} key={index}>

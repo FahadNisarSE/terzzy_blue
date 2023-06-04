@@ -66,16 +66,16 @@ export default function NFT() {
           computer technologies.
         </motion.p>
       </div>
-      <div className="flex items-center gap-6 sm:order-1 -order-1 sm:overflow-auto sm:min-w-0 min-w-fit overflow-x-scroll">
+      <div className="flex items-center gap-6 sm:order-1 -order-1 sm:overflow-auto sm:min-w-0 max-w-[100%] overflow-x-scroll">
         <motion.div
           variants={fadeIn("right", "spring", 0 * 0.5, 1.75)}
-          className="w-[150px] h-[150px] rounded-2xl overflow-hidden"
+          className="min-w-[150px] h-[150px] rounded-2xl overflow-hidden"
         >
           <BlurImage src={nft1} alt="nft-image" />
         </motion.div>
         <motion.div
           variants={fadeIn("right", "spring", 1 * 0.5, 1.75)}
-          className="w-[150px] h-[150px] rounded-2xl overflow-hidden"
+          className="min-w-[150px] h-[150px] rounded-2xl overflow-hidden"
         >
           <BlurImage src={nft2} alt="nft-image" />
         </motion.div>

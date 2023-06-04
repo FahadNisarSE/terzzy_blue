@@ -34,7 +34,7 @@ export default function About() {
     >
       <motion.div
         variants={textContainer}
-        className="about headings-gradient sm:text-[300px] text-[48px] font-semibold sm:leading-[220px] leading-none tracking-wide sm:my-auto"
+        className="about headings-gradient sm:text-[200px] text-[48px] font-semibold leading-none tracking-wide sm:my-auto"
       >
         {Array.from("ABOUT").map((letter, index) => (
           <motion.span variants={textVariant2} key={index}>
@@ -44,7 +44,7 @@ export default function About() {
       </motion.div>
       <motion.div
         variants={textContainer}
-        className="us headings-gradient sm:text-[300px] text-[48px] font-semibold sm:leading-[220px] leading-none tracking-wide"
+        className="us headings-gradient sm:text-[200px] text-[48px] font-semibold sm:leading-[220px] leading-none tracking-wide"
       >
         {Array.from("US").map((letter, index) => (
           <motion.span variants={textVariant2} key={index}>
