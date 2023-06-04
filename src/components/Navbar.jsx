@@ -101,10 +101,25 @@ const NormalLinks = () => (
   </>
 );
 
+const scrollToContainer = (e, targetId) => {
+  e.preventDefault();
+
+  console.log("Tagetid: ", targetId);
+  
+  const targetSection = document.querySelector(targetId);
+  console.log("Target Section : ", targetSection);
+
+  const container = document.querySelector("html");
+  console.log("Container : ", container);
+  
+  console.log("Taget Section offset : ", targetSection.offsetLeft);
+  container.scrollLeft = targetSection.offsetLeft-20;
+};
+
 export default function Navbar() {
   const { pathname } = useLocation();
   const { showCarousel } = useToggleCarousel();
-  const {showPopupModal} = usePopupModal();
+  const { showPopupModal } = usePopupModal();
 
   const activeLink = (link) => (pathname === link ? "text-black" : null);
 
@@ -121,7 +136,9 @@ export default function Navbar() {
               key={page.title}
               className={`hover:text-black min-w-fit transition leading-[1] ${activeLink(
                 page.link
-              )} ${showCarousel || showPopupModal && "text-white font-normal"}`}
+              )} ${
+                showCarousel || (showPopupModal && "text-white font-normal")
+              }`}
             >
               <Link to={page.link}>{page.title}</Link>
             </div>
@@ -133,7 +150,9 @@ export default function Navbar() {
           pathname !== "/collection" && (
             <>
               <BsDash
-                className={`text-black ${showCarousel || showPopupModal && "text-white"}`}
+                className={`text-black ${
+                  showCarousel || (showPopupModal && "text-white")
+                }`}
               />
               <div className="sm:flex hidden items-center customsm:gap-2 gap-3 max-w-[820px] flex-wrap">
                 {bookmarkLinks.map((section, index) => (
@@ -141,13 +160,23 @@ export default function Navbar() {
                     <div
                       className={`flex items-center text-[11px] leading-[1] font-semibold hover:text-black transition ${activeLink(
                         section.link
-                      )} ${showCarousel || showPopupModal && "text-white font-normal"}`}
+                      )} ${
+                        showCarousel ||
+                        (showPopupModal && "text-white font-normal")
+                      }`}
                     >
-                      <a href={section.link}>{section.title}</a>
+                      <a
+                        href={section.link}
+                        onClick={(e) => scrollToContainer(e, section.link)}
+                      >
+                        {section.title}
+                      </a>
                     </div>
                     {++index !== bookmarkLinks.length && (
                       <BsDot
-                        className={`text-black ${showCarousel || showPopupModal && "text-white"}`}
+                        className={`text-black ${
+                          showCarousel || (showPopupModal && "text-white")
+                        }`}
                       />
                     )}
                   </>

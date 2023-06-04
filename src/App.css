@@ -6,7 +6,6 @@
   margin: 0;
   padding: 0;
   scroll-padding-top: 200px;
-  scroll-margin-inline: 200px;
 }
 
 @font-face {
@@ -20,7 +19,6 @@
 body {
   font-family: "ClashDisplay-Variable", Arial, Helvetica, sans-serif;
   font-style: var(--my-font-style, normal);
-
   max-width: 100vw;
   overflow-x: hidden;
   display: flex;
