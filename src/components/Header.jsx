@@ -13,8 +13,8 @@ export default function Header() {
   const { setShowSidebar } = useToggleSidebar();
 
   return (
-    <section
-      className={`flex items-center justify-between p-4 w-full py-2 pt-0 max-w-full sm:absolute sm:top-0 z-[110]`}
+    <header
+      className={`flex items-center justify-between p-4 w-full py-2 pt-0 max-w-full sm:fixed sm:left-0 sm:right-0 sm:top-0 z-[110]`}
     >
       <Link to="/">
         <h2
@@ -49,6 +49,6 @@ export default function Header() {
           </Link>
         </div>
       </div>
-    </section>
+    </header>
   );
 }

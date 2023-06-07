@@ -91,11 +91,11 @@ export default function Collection() {
                       className={`relative ${
                         myActive === index
                           ? "sm:h-[400px] w-full h-full sm:w-[400px] z-20"
-                          : "sm:w-[200px] sm:h-[200px] w-full h-full z-0"
+                          : "sm:w-[300px] sm:h-[300px] w-full h-full z-0"
                       } ${
                         index < myActive
-                          ? "mr-[40px]"
-                          : index > myActive && "sm:ml-[40px]"
+                          ? "mr-[5px]"
+                          : index > myActive && "sm:ml-[5px]"
                       } pointer-events-none rounded-lg overflow-hidden mx-auto transition-all duration-1000`}
                     >
                       <BlurImage src={image.image} alt={image.alt} />

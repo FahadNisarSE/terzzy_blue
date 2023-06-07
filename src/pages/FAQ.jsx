@@ -129,8 +129,6 @@ export default function FAQ() {
   const [active, setActive] = useState("");
   const { setQuestionSection } = useQuestionSection();
 
-  console.log("Active", active);
-
   return (
     <>
       {active === "" ? (
@@ -142,11 +140,13 @@ export default function FAQ() {
           className="faq-layout sm:min-h-fit min-w-fit"
         >
           <motion.div
-            onClick={() => setShowCarousel(true)}
             variants={fadeIn("right", "spring", 0.5, 1.75)}
-            className="gray-container overflow-hidden h-[425px] w-[421px] bg-gray-200 rounded-e-2xl mr-2 sm:block hidden cursor-pointer"
+            onClick={() => setShowCarousel(true)}
+            className="gray-container h-[380px] w-[350px] overflow-hidden bg-gray-200 rounded-e-2xl mr-2 sm:block hidden cursor-pointer"
           >
-            <BlurImage src={fifteen} alt="faq" noModal={true} />
+            <motion.div className="h-[425px] w-[400px]">
+              <BlurImage src={fifteen} alt="faq" noModal={true} />
+            </motion.div>
           </motion.div>
           <motion.div
             variants={textContainer}
@@ -169,7 +169,7 @@ export default function FAQ() {
             ))}
           </motion.div>
           <div className="bookmarks flex sm:flex-row flex-col items-start justify relative gap-8 sm:ml-4 sm:mt-0 mt-8">
-            <div className="flex items-center flex-wrap sm:gap-3 gap-4 sm:mr-[100px] justify-start sm:min-w-[500px] sm:p-0 px-4">
+            <div className="flex items-center flex-wrap sm:gap-1 gap-4 sm:mr-[100px] justify-start sm:min-w-[500px] sm:p-0 px-4">
               {bookmarkLinks.map(({ title }, index) => (
                 <motion.div
                   key={title}

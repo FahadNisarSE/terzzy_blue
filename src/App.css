@@ -302,7 +302,7 @@ body {
     overflow-y: hidden;
     overflow-x: scroll;
     scroll-behavior: smooth;
-    transition: scroll-left 0.3s ease-in-out;
+    transition: scroll-left 0.1s ease-in-out;
   }
 
   body {

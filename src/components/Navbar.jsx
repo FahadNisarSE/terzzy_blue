@@ -104,16 +104,15 @@ const NormalLinks = () => (
 const scrollToContainer = (e, targetId) => {
   e.preventDefault();
 
-  console.log("Tagetid: ", targetId);
-
   const targetSection = document.querySelector(targetId);
-  console.log("Target Section : ", targetSection);
 
   const container = document.querySelector("html");
-  console.log("Container : ", container);
 
-  console.log("Taget Section offset : ", targetSection.offsetLeft);
   container.scrollLeft = targetSection.offsetLeft - 20;
+  // container.scrollBy({
+  //   left: targetSection.offsetLeft - 20,
+  //   behavior: 'smooth'
+  // })
 };
 
 export default function Navbar() {
