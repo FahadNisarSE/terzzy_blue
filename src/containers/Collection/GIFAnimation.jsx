@@ -2,18 +2,21 @@ import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useLocation } from "react-router-dom";
 
-import gifAnimation from "../../assets/gifAnimation.mp4";
-import Gif_Plasma from "../../assets/col/Gif_Plasma.gif";
+// import gifAnimation from "../../assets/gifAnimation.mp4";
+// import Gif_Plasma from "../../assets/col/Gif_Plasma.gif";
 
 import { fadeIn, staggerContainer } from "../../utils/motion";
-import { TypingHeading, NavDot, BlurImage } from "../../components";
+import { TypingHeading, NavDot } from "../../components";
 
 const Image = ({ value }) => (
   <motion.div
     variants={fadeIn("", "tween", 1, 0.5)}
     className={`w-[${value}] h-[${value}] max-w-[200px]`}
   >
-    <img src={Gif_Plasma} alt="plasma_gif" />
+    <img
+      src="https://firebasestorage.googleapis.com/v0/b/terzzy-10d77.appspot.com/o/Gif_Plasma.gif?alt=media&token=7b95c7f7-d7d1-4746-b9de-7d6ec4cfc133"
+      alt="plasma_gif"
+    />
   </motion.div>
 );
 
@@ -63,21 +66,27 @@ export default function GIFAnimation() {
         } w-full sm:w-[500px] h-[280px] rounded-2xl sm:mt-0 mt-4 cursor-pointer`}
       >
         <video autoPlay loop muted playsInline>
-          <source src={gifAnimation} type="video/mp4" />
+          <source
+            src="https://firebasestorage.googleapis.com/v0/b/terzzy-10d77.appspot.com/o/gifAnimation.mp4?alt=media&token=354b43ab-e719-42df-8348-beb86253539d"
+            type="video/mp4"
+          />
         </video>
       </motion.div>
       <div
         onClick={() => {
           togglePopupModal(true);
           modify({
-            src: gifAnimation,
+            src: "https://firebasestorage.googleapis.com/v0/b/terzzy-10d77.appspot.com/o/gifAnimation.mp4?alt=media&token=354b43ab-e719-42df-8348-beb86253539d",
             image: false,
           });
         }}
         className="flex gap-6 sm:hidden overflow-hidden sm:w-auto w-full sm:mx-0 mx-auto pr-4"
       >
         <video autoPlay loop muted className="w-full h-full rounded-lg">
-          <source src={gifAnimation} type="video/mp4" />
+          <source
+            src="https://firebasestorage.googleapis.com/v0/b/terzzy-10d77.appspot.com/o/gifAnimation.mp4?alt=media&token=354b43ab-e719-42df-8348-beb86253539d"
+            type="video/mp4"
+          />
         </video>
       </div>
       <div className="sm:hidden block">

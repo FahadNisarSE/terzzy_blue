@@ -1,12 +1,8 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-import leftarrow from "../../assets/col/leftarrow.svg";
-import rightarrow from "../../assets/col/rightarrow.svg";
-import { BsDot } from "react-icons/bs";
-
 import { staggerContainer, fadeIn } from "../../utils/motion";
-import video from "../../assets/FinalAnimation_01.mp4";
+// import video from "../../assets/FinalAnimation_01.mp4";
 import { usePopupData, usePopupModal } from "../../Hooks/usePopupModal";
 
 export default function EndingComponent() {
@@ -65,7 +61,7 @@ export default function EndingComponent() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src={video} type="video/mp4" />
+            <source src='https://firebasestorage.googleapis.com/v0/b/terzzy-10d77.appspot.com/o/FinalAnimation_01.mp4?alt=media&token=2e38058b-c1fc-454e-bcac-c9734dbd80fd' type="video/mp4" />
           </video>
         </motion.div>
       </motion.div>
