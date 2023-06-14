@@ -61,7 +61,7 @@ export default function Interior() {
           <TypingHeading title="INTERIORS" />
           <motion.p
             variants={fadeIn("up", "tween", 0.2, 1)}
-            className="uppercase max-w-[250px] sm:text-[12px] text-[10px] text-black font-medium"
+            className="uppercase max-w-[230px] sm:text-[12px] text-[10px] text-black font-medium"
           >
             We have modern technical tools that allow us to implement images of
             the interior of your planned premises.
@@ -148,13 +148,15 @@ export default function Interior() {
             />
           </div>
         </div>
-        <motion.p
+        <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
-          className="uppercase z-40 rounded-[25px] text-gray-300 shadow-lg backdrop-blur-0 radial-bg-gradient bg-opacity-75 px-4 py-6 bottom-0 left-0 text-xs absolute"
+          className="uppercase z-40 rounded-[25px] text-gray-300 shadow-lg w-full backdrop-blur-0 radial-bg-gradient bg-opacity-75 px-4 py-5 bottom-0 left-0 text-xs absolute"
         >
-          Every detail can be viewed from all sides, since with our help you
-          will be able to turn 360 degrees
-        </motion.p>
+          <p className="w-[400px]">
+            Every detail can be viewed from all sides, since with our help you
+            will be able to turn 360 degrees
+          </p>
+        </motion.div>
       </motion.div>
     </motion.section>
   );

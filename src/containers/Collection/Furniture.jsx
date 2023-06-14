@@ -102,12 +102,12 @@ export default function Furniture() {
       >
         <BlurImage src={sect34} alt="Chairs Image" cover={true} />
       </div>
-      <div className="flex items-center sm:justify-normal justify-between w-full sm:px-0 px-4 sm:gap-10 gap-2 sm:w-fit">
+      <div className="flex items-center justify-between max-w-full px-4 sm:gap-8 gap-2">
         <div className="flex sm:flex-row flex-col sm:items-center justify-between gap-4">
           <TypingHeading title="FURNITURE" />
           <motion.p
             variants={fadeIn("up", "tween", 0.2, 1)}
-            className="uppercase sm:max-w-[400px] max-w-[250px] sm:text-[12px] text-[10px] text-black font-medium"
+            className="uppercase sm:max-w-[390px] max-w-[250px] sm:text-[12px] text-[10px] text-black font-medium"
           >
             The capabilities of 3D furniture modeling programs allow you to
             compose and view objects in a three-dimensional form.

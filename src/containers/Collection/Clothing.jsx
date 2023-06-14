@@ -52,10 +52,10 @@ export default function Clothing() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className="clothing-top flex flex-col gap-4 sm:max-w-none max-w-full sm:overflow-auto overflow-hidden"
+        className="clothing-top flex flex-col gap-6 sm:max-w-none max-w-full sm:overflow-auto overflow-hidden"
       >
         <NavDot active={active} />
-        <div className="flex flex-col gap-4 max-w-full">
+        <div className="flex flex-col gap-6 max-w-full">
           <div className="sm:block hidden heading-gradient">
             <TypingHeading title="BRANDS" />
           </div>
@@ -191,11 +191,11 @@ export default function Clothing() {
         viewport={{ once: true, amount: 0.25 }}
         className="clothing-bottom flex items-center gap-8"
       >
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
           <TypingHeading title="CLOTHING" />
           <motion.p
             variants={fadeIn("up", "tween", 0.2, 1)}
-            className="uppercase max-w-[405px] w-full sm:text-[12px] text-[10px] text-black font-medium"
+            className="uppercase max-w-[450px] w-full sm:text-[12px] text-[10px] text-black font-medium"
           >
             With the help of 3D technology, clothes can be sold simply by
             showing them on the monitor of your computer, tablet or smartphone,

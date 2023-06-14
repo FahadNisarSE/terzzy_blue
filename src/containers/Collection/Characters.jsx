@@ -41,7 +41,7 @@ export default function Characters({ small }) {
       >
         CHARACTERS
       </h4>
-      <div className="flex sm:flex-col flex-row sm:gap-12 gap-2 sm:overflow-visible max-w-full overflow-x-scroll">
+      <div className="flex sm:flex-col flex-row sm:gap-8 gap-2 sm:overflow-visible max-w-full overflow-x-scroll">
         <h4
           style={{
             writingMode: "vertical-rl",
@@ -74,7 +74,7 @@ export default function Characters({ small }) {
         </div>
         <motion.p
           variants={fadeIn("up", "tween", 0.2, 1)}
-          className="uppercase max-w-[500px] w-full text-[12px] sm:block hidden text-black font-medium"
+          className="uppercase max-w-[480px] w-full text-[12px] sm:block hidden text-black font-medium"
         >
           When you have an idea for a new animated character, conveying all the
           needed details in a 2D drawing may be challenging. 3D character

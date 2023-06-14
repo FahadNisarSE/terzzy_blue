@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <header
-      className={`flex items-center justify-between p-4 w-full py-2 pt-0 max-w-full sm:fixed sm:left-0 sm:right-0 sm:top-0 z-[110]`}
+      className={`flex items-center justify-between p-4 w-full max-w-full sm:fixed sm:left-0 sm:right-0 sm:top-0 z-[110]`}
     >
       <Link to="/">
         <h2
@@ -39,7 +39,7 @@ export default function Header() {
         >
           <img src={NavButton} alt="open menu" />
         </div>
-        <div className="w-[140px] min-w-[90px] sm:h-[100px] h-[60px]">
+        <div className="sm:w-[150px] w-[120px] min-w-[90px] h-[50px]">
           <Link className="uppercase" to="/contact">
             <img
               src={showCarousel || showPopupModal ? whiteOrder : borderImage}

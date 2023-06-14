@@ -155,7 +155,7 @@ export default function ProfessionalProducts() {
               PROFESSIONAL
             </motion.h1>
           </div>
-          <div className="flex items-center sm:gap-8 gap-4 sm:mx-auto w-fit">
+          <div className="flex items-center gap-4 sm:mx-auto w-fit">
             <Link to="/about">
               <motion.img
                 className="min-w-[30px] sm:block hidden"

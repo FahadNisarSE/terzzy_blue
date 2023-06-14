@@ -34,7 +34,7 @@ export default function Industrial() {
       className="sm:min-w-fit flex flex-col sm:gap-16 sm:max-w-auto max-w-full sm:w-auto w-full"
     >
       <NavDot active={active} />
-      <div className="relative flex sm:gap-8 gap-2 pb-16 sm:overflow-auto overflow-x-scroll sm:max-w-none max-w-full sm:w-auto sm:mx-0 mx-auto">
+      <div className="relative flex sm:gap-8 gap-2 pb-16 sm:overflow-visible overflow-x-scroll sm:max-w-none max-w-full sm:w-auto sm:mx-0 mx-auto">
         <motion.div
           variants={fadeIn("", "tween", 1, 0.5)}
           className="sm:w-[150px] sm:h-[150px] sm:block hidden object-cover"
@@ -49,7 +49,7 @@ export default function Industrial() {
         </motion.div>
         <motion.div
           variants={special("top", "tween", 1.2, 0.5)}
-          className="absolute sm:bottom-0 bottom-5 right-0 sm:w-[90%] sm:max-w-none max-w-[250px] w-[80%] z-[20]"
+          className="absolute sm:-bottom-8 bottom-5 right-0 sm:w-[90%] sm:max-w-none max-w-[250px] w-[80%] z-[20]"
         >
           <BlurImage src={sect93} alt="industrial-image" />
         </motion.div>
@@ -66,17 +66,17 @@ export default function Industrial() {
           <BlurImage src={sect92} alt="industrial-images" />
         </motion.div>
       </div>
-      <div className="sm:pt-0 sm:-mt-16">
+      <div className="sm:pt-0 sm:-mt-10">
         <TypingHeading title="INDUSTRIAL" />
         <motion.span
           variants={fadeIn("up", "tween", 0.2, 1)}
-          className="uppercase text-lightgray text-xs"
+          className="uppercase text-black text-xs"
         >
           PRODUCT DESIGN
         </motion.span>
         <motion.p
           variants={fadeIn("up", "tween", 0.2, 1)}
-          className="uppercase sm:max-w-full-[300px] max-w-[350px] sm:text-[12px] text-[10px] sm:mt-4 text-black font-medium"
+          className="uppercase sm:max-w-[300px] max-w-[350px] sm:text-[12px] text-[10px] text-black font-medium"
         >
           Our company offers product design ready for manufacturing. Starting
           from concept design, 3d visualizations, 3D test prints up to CAD

@@ -6,7 +6,7 @@ import { staggerContainer, fadeIn } from "../../utils/motion";
 import { TypingHeading, NavDot } from "../../components";
 import { borderImage } from "../../assets/foot";
 import star from "../../assets/col/star.png";
-// import video from "../../assets/video.mp4";
+import video from "../../assets/video.mp4";
 import { usePopupData, usePopupModal } from "../../Hooks/usePopupModal";
 
 import useSmallScreen from "../../Hooks/useSmallScreen";
@@ -34,7 +34,7 @@ const Container = () => {
         className="w-full h-full object-cover rounded-xl"
       >
         <source
-          src="https://firebasestorage.googleapis.com/v0/b/terzzy-10d77.appspot.com/o/video.mp4?alt=media&token=3c92916c-b3b2-4f66-9dd0-db88e162568c"
+          src={video}
           type="video/mp4"
         />
       </video>

@@ -2,6 +2,9 @@ import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useLocation } from "react-router-dom";
 
+import gifAnimation from "../../assets/gifAnimation.mp4";
+import gif_Blob from '../../assets/Gif_Plasma.gif';
+
 // import gifAnimation from "../../assets/gifAnimation.mp4";
 // import Gif_Plasma from "../../assets/col/Gif_Plasma.gif";
 
@@ -14,7 +17,7 @@ const Image = ({ value }) => (
     className={`w-[${value}] h-[${value}] max-w-[200px]`}
   >
     <img
-      src="https://firebasestorage.googleapis.com/v0/b/terzzy-10d77.appspot.com/o/Gif_Plasma.gif?alt=media&token=7b95c7f7-d7d1-4746-b9de-7d6ec4cfc133"
+      src={gif_Blob}
       alt="plasma_gif"
     />
   </motion.div>
@@ -67,7 +70,7 @@ export default function GIFAnimation() {
       >
         <video autoPlay loop muted playsInline>
           <source
-            src="https://firebasestorage.googleapis.com/v0/b/terzzy-10d77.appspot.com/o/gifAnimation.mp4?alt=media&token=354b43ab-e719-42df-8348-beb86253539d"
+            src={gifAnimation}
             type="video/mp4"
           />
         </video>
@@ -76,7 +79,7 @@ export default function GIFAnimation() {
         onClick={() => {
           togglePopupModal(true);
           modify({
-            src: "https://firebasestorage.googleapis.com/v0/b/terzzy-10d77.appspot.com/o/gifAnimation.mp4?alt=media&token=354b43ab-e719-42df-8348-beb86253539d",
+            src: gifAnimation,
             image: false,
           });
         }}
@@ -84,7 +87,7 @@ export default function GIFAnimation() {
       >
         <video autoPlay loop muted className="w-full h-full rounded-lg">
           <source
-            src="https://firebasestorage.googleapis.com/v0/b/terzzy-10d77.appspot.com/o/gifAnimation.mp4?alt=media&token=354b43ab-e719-42df-8348-beb86253539d"
+            src={gifAnimation}
             type="video/mp4"
           />
         </video>

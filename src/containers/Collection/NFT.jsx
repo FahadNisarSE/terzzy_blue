@@ -39,11 +39,11 @@ export default function NFT() {
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
       id="nft"
-      className="sm:min-w-fit flex flex-col gap-6 sm:max-w-auto max-w-full sm:w-auto w-full"
+      className="sm:min-w-fit flex flex-col gap-4 sm:max-w-auto max-w-full sm:w-auto w-full"
     >
       <NavDot active={active} />
       <div
-        className={`overflow-hidden sm:w-[600px] sm:mr-0 mr-2 h-[200px] sm:order-none -order-1 rounded-2xl sm:block ${
+        className={`overflow-hidden sm:w-[600px] sm:mr-0 mr-2 h-[230px] sm:order-none -order-1 rounded-2xl sm:block ${
           pathname !== "/nft" && "hidden"
         }`}
       >
@@ -54,11 +54,11 @@ export default function NFT() {
           <BlurImage src={nftBanner} alt="dummy-image" />
         </motion.div>
       </div>
-      <div className="flex sm:items-center sm:flex-row flex-col sm:gap-8 gap-2">
+      <div className="flex sm:flex-row flex-col sm:gap-8 gap-2">
         <TypingHeading title="NFT" />
         <motion.p
           variants={fadeIn("up", "tween", 0.2, 1)}
-          className="sm:max-w-[500px] max-w-[300px] uppercase sm:text-[12px] text-[10px] text-black font-medium"
+          className="sm:max-w-[480px] max-w-[300px] uppercase sm:text-[12px] text-[10px] leading-snug text-black font-medium"
         >
           NFT literally means "non-fungible tokens". This is a kind of tokens
           where each instance is unique. We will help you realize your idea,
@@ -97,7 +97,7 @@ export default function NFT() {
           variants={fadeIn("", "tween", 1, 0.5)}
           src={nftImage2}
           alt="dummy-image"
-          className="sm:p-0 pr-4 cursor-pointer"
+          className="sm:p-0 pr-4 cursor-pointer w-[60px]"
           onClick={() => setShowCarousel(true)}
         />
       </div>
