@@ -105,7 +105,7 @@ export default function About() {
         variants={fadeIn("up", "spring", 0.5, 1.75)}
         className="statistics sm:pr-0 pr-4 flex flex-col justify-between"
       >
-        <p className="uppercase sm:w-[500px] sm:text-[13px] text-[10px] sm:text-left text-center">
+        <p className="uppercase sm:w-[500px] sm:text-[13px] text-[10px] sm:text-left text-center text-black font-medium leading-snug">
           Our firm offers product design for different purposes, starting from
           the development phase, testing up to visualization for online stores,
           presentations, websites, brochures, and advertisements. Product
@@ -124,10 +124,10 @@ export default function About() {
             variants={fadeIn("top", "spring", 0.5, 1.75)}
             className="flex flex-col items-center gap-2 text-center"
           >
-            <h4 className="headings-gradient sm:text-3xl text-4xl font-extrabold">
+            <h4 className="headings-gradient sm:text-3xl text-6xl font-extrabold">
               7
             </h4>
-            <p className="sm:text-xs text-[10px] max-w-[60px]">
+            <p className="sm:text-xs text-[10px] text-black leading-snug font-medium max-w-[60px]">
               YEARS OF EXPERIENCE
             </p>
           </motion.div>
@@ -135,10 +135,10 @@ export default function About() {
             variants={fadeIn("top", "spring", 0.5, 1.75)}
             className="flex flex-col items-center gap-2 text-center"
           >
-            <h4 className="headings-gradient sm:text-3xl text-4xl font-extrabold">
+            <h4 className="headings-gradient sm:text-3xl text-6xl font-extrabold">
               400+
             </h4>
-            <p className="sm:text-xs text-[10px] max-w-[70px]">
+            <p className="sm:text-xs text-[10px] text-black leading-snug font-medium max-w-[70px]">
               SUCCESSFULL PROJECTS
             </p>
           </motion.div>
@@ -146,10 +146,10 @@ export default function About() {
             variants={fadeIn("top", "spring", 0.5, 1.75)}
             className="flex flex-col items-center gap-2 text-center"
           >
-            <h4 className="headings-gradient sm:text-3xl text-4xl font-extrabold">
+            <h4 className="headings-gradient sm:text-3xl text-6xl font-extrabold">
               21
             </h4>
-            <p className="sm:text-xs text-[10px] max-w-[40px]">TEAM MEMBERS</p>
+            <p className="sm:text-xs text-[10px] text-black leading-snug font-medium max-w-[40px]">TEAM MEMBERS</p>
           </motion.div>
         </div>
       </motion.div>

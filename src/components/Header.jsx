@@ -27,7 +27,7 @@ export default function Header() {
       </Link>
       <div className="flex items-center sm:gap-4 gap-1">
         <div
-          className={`max-w-[70px] uppercase font-bold mr-[10%] text-[11px] leading-4 tracking-wider sm:block hidden ${
+          className={`max-w-[70px] uppercase font-bold mr-[10%] text-[10px] leading-none tracking-wider sm:block hidden ${
             showCarousel || (showPopupModal && "text-white font-normal")
           }`}
         >
@@ -39,7 +39,7 @@ export default function Header() {
         >
           <img src={NavButton} alt="open menu" />
         </div>
-        <div className="w-[120px] min-w-[90px] sm:h-[100px] h-[60px]">
+        <div className="w-[140px] min-w-[90px] sm:h-[100px] h-[60px]">
           <Link className="uppercase" to="/contact">
             <img
               src={showCarousel || showPopupModal ? whiteOrder : borderImage}

@@ -72,7 +72,7 @@ export default function ThreeDVideo() {
           <TypingHeading title="3D VIDEO" />
           <motion.p
             variants={fadeIn("up", "tween", 0.2, 1)}
-            className="max-w-[340px] uppercase sm:text-[12px] text-[10px]"
+            className="max-w-[360px] uppercase sm:text-[12px] text-[10px] text-black font-medium"
           >
             Get amazing attractive videos, 3D animations, demo videos for your
             product without sending it to us!

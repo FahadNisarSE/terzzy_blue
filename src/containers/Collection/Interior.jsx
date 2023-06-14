@@ -11,13 +11,18 @@ import interiorBanner from "../../assets/col/interior-banner.webp";
 import { staggerContainer, fadeIn } from "../../utils/motion";
 import { TypingHeading, NavDot, BlurImage } from "../../components";
 
+import useToggleCarousel from "../../Hooks/useToggleCarousel";
 import useSmallScreen from "../../Hooks/useSmallScreen";
 
 export default function Interior() {
   const [active, setActive] = useState(true);
   const container = useRef(null);
   const { isSmall } = useSmallScreen();
-  const isInView = useInView(container, { once: false, amount: isSmall ? 0.25 : 1 });
+  const { setShowCarousel } = useToggleCarousel();
+  const isInView = useInView(container, {
+    once: false,
+    amount: isSmall ? 0.25 : 1,
+  });
   const [currentFocused, setCurrentFocused] = useState(0);
 
   const interiorImages = [
@@ -56,7 +61,7 @@ export default function Interior() {
           <TypingHeading title="INTERIORS" />
           <motion.p
             variants={fadeIn("up", "tween", 0.2, 1)}
-            className="uppercase max-w-[250px] sm:text-[12px] text-[10px]"
+            className="uppercase max-w-[250px] sm:text-[12px] text-[10px] text-black font-medium"
           >
             We have modern technical tools that allow us to implement images of
             the interior of your planned premises.
@@ -145,7 +150,7 @@ export default function Interior() {
         </div>
         <motion.p
           variants={fadeIn("up", "tween", 0.2, 1)}
-          className="uppercase z-40 rounded-[25px] text-gray-300 shadow-lg backdrop-blur-0 radial-bg-gradient px-4 py-6 bottom-0 left-0 text-xs absolute"
+          className="uppercase z-40 rounded-[25px] text-gray-300 shadow-lg backdrop-blur-0 radial-bg-gradient bg-opacity-75 px-4 py-6 bottom-0 left-0 text-xs absolute"
         >
           Every detail can be viewed from all sides, since with our help you
           will be able to turn 360 degrees

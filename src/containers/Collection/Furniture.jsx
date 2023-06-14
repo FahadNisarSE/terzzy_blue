@@ -107,7 +107,7 @@ export default function Furniture() {
           <TypingHeading title="FURNITURE" />
           <motion.p
             variants={fadeIn("up", "tween", 0.2, 1)}
-            className="uppercase sm:max-w-[400px] max-w-[250px] sm:text-[12px] text-[10px]"
+            className="uppercase sm:max-w-[400px] max-w-[250px] sm:text-[12px] text-[10px] text-black font-medium"
           >
             The capabilities of 3D furniture modeling programs allow you to
             compose and view objects in a three-dimensional form.

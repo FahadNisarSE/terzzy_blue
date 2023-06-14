@@ -37,7 +37,7 @@ export default function Characters({ small }) {
           textOrientation: "mixed",
           transform: "rotate(180deg)",
         }}
-        className="headings-gradient font-bold sm:mr-2 text-4xl sm:block hidden"
+        className="headings-gradient font-semibold sm:mr-2 text-4xl sm:block hidden"
       >
         CHARACTERS
       </h4>
@@ -74,7 +74,7 @@ export default function Characters({ small }) {
         </div>
         <motion.p
           variants={fadeIn("up", "tween", 0.2, 1)}
-          className="uppercase max-w-[500px] w-full text-[12px] sm:block hidden"
+          className="uppercase max-w-[500px] w-full text-[12px] sm:block hidden text-black font-medium"
         >
           When you have an idea for a new animated character, conveying all the
           needed details in a 2D drawing may be challenging. 3D character
@@ -84,7 +84,7 @@ export default function Characters({ small }) {
       </div>
       <motion.p
         variants={fadeIn("up", "tween", 0.2, 1)}
-        className="uppercase max-w-[450px] w-full mt-8 text-[10px] sm:hidden block px-2"
+        className="uppercase max-w-[450px] w-full mt-8 text-[10px] sm:hidden block px-2 text-black font-medium"
       >
         When you have an idea for a new animated character, conveying all the
         needed details in a 2D drawing may be challenging. 3D character modeling

@@ -96,7 +96,7 @@ export default function GIFAnimation() {
         {!isSmall ? <Image value="150px" /> : null}
         <motion.p
           variants={fadeIn("up", "tween", 0.2, 1)}
-          className="uppercase sm:max-w-[300px] max-w-[350px] sm:text-[12px] text-[10px]"
+          className="uppercase sm:max-w-[300px] max-w-[350px] sm:text-[12px] text-[10px] text-black font-medium"
         >
           Our motion graphics and VFX solutions company uses the latest tools
           and techniques for custom motion graphics, motion capture and VFX

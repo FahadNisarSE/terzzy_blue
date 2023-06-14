@@ -195,7 +195,7 @@ export default function Clothing() {
           <TypingHeading title="CLOTHING" />
           <motion.p
             variants={fadeIn("up", "tween", 0.2, 1)}
-            className="uppercase max-w-[405px] w-full sm:text-[12px] text-[10px]"
+            className="uppercase max-w-[405px] w-full sm:text-[12px] text-[10px] text-black font-medium"
           >
             With the help of 3D technology, clothes can be sold simply by
             showing them on the monitor of your computer, tablet or smartphone,

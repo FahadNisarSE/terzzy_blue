@@ -150,7 +150,7 @@ export default function ProfessionalProducts() {
             />
             <motion.h1
               variants={fadeIn("", "tween", 0.25, 0.5)}
-              className="headings-gradient font-bold sm:tracking-wider sm:text-[96px] text-[42px] sm:leading-[120px]"
+              className="headings-gradient font-semibold sm:tracking-wider sm:text-[96px] text-[42px] sm:leading-[120px]"
             >
               PROFESSIONAL
             </motion.h1>
@@ -172,7 +172,7 @@ export default function ProfessionalProducts() {
             </Link>
             <motion.p
               variants={fadeIn("up", "tween", 0.25, 1)}
-              className="uppercase sm:text-[12px] text-[10px] lg:max-w-[600px] sm:max-w-[700px] max-w-[350px]"
+              className="uppercase sm:text-[12px] text-[10px] lg:max-w-[660px] sm:max-w-[700px] max-w-[350px] text-black font-medium"
             >
               Our firm offers product design for different purposes, starting
               from the development phase, testing up to visualization for online
@@ -211,7 +211,7 @@ export default function ProfessionalProducts() {
           </motion.div>
           <motion.div
             variants={fadeIn("up", "tween", 0.25, 1)}
-            className="uppercase sm:col-span-2 sm:text-[12px] max-w-[400px] text-[10px] tracking-wider sm:mb-2"
+            className="uppercase sm:col-span-2 sm:text-[12px] max-w-[400px] text-[10px] sm:mb-2 text-black font-medium"
           >
             Create a stunning images with help of 3D renderings - drive clicks
             and increase conversion. We offer not simple photo shooting but

@@ -49,7 +49,7 @@ export default function Industrial() {
         </motion.div>
         <motion.div
           variants={special("top", "tween", 1.2, 0.5)}
-          className="absolute sm:bottom-10 bottom-5 right-0 sm:w-full sm:max-w-none max-w-[250px] w-[80%] z-[20]"
+          className="absolute sm:bottom-0 bottom-5 right-0 sm:w-[90%] sm:max-w-none max-w-[250px] w-[80%] z-[20]"
         >
           <BlurImage src={sect93} alt="industrial-image" />
         </motion.div>
@@ -76,7 +76,7 @@ export default function Industrial() {
         </motion.span>
         <motion.p
           variants={fadeIn("up", "tween", 0.2, 1)}
-          className="uppercase sm:max-w-full-[300px] max-w-[350px] sm:text-[12px] text-[10px] sm:mt-4"
+          className="uppercase sm:max-w-full-[300px] max-w-[350px] sm:text-[12px] text-[10px] sm:mt-4 text-black font-medium"
         >
           Our company offers product design ready for manufacturing. Starting
           from concept design, 3d visualizations, 3D test prints up to CAD

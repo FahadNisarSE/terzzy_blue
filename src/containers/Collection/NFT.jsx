@@ -58,7 +58,7 @@ export default function NFT() {
         <TypingHeading title="NFT" />
         <motion.p
           variants={fadeIn("up", "tween", 0.2, 1)}
-          className="sm:max-w-[500px] max-w-[300px] uppercase sm:text-[12px] text-[10px]"
+          className="sm:max-w-[500px] max-w-[300px] uppercase sm:text-[12px] text-[10px] text-black font-medium"
         >
           NFT literally means "non-fungible tokens". This is a kind of tokens
           where each instance is unique. We will help you realize your idea,
