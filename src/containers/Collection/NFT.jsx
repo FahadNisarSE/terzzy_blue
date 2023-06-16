@@ -2,12 +2,12 @@ import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 import nftImage2 from "../../assets/col/nftImage2.svg";
-import nftBanner from "../../assets/col/nftBanner.webp";
-import nft1 from "../../assets/col/nft1.webp";
-import nft2 from "../../assets/col/nft2.webp";
-import nft3 from "../../assets/col/nft3.webp";
-import nft4 from "../../assets/col/nft4.webp";
-import nft5 from "../../assets/col/nft5.webp";
+import nftBanner from "../../assets/col/nftBanner.png";
+import nft1 from "../../assets/col/nft1.png";
+import nft2 from "../../assets/col/nft2.png";
+import nft3 from "../../assets/col/nft3.png";
+import nft4 from "../../assets/col/nft4.png";
+import nft5 from "../../assets/col/nft5.png";
 
 import { staggerContainer, fadeIn } from "../../utils/motion";
 import { TypingHeading, NavDot, BlurImage } from "../../components";

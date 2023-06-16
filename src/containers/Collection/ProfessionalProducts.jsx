@@ -9,13 +9,13 @@ import AboutUs from "../../assets/col/aboutus.svg";
 import Switch from "../../assets/col/switch.svg";
 import smallAboutUs from "../../assets/col/smallaboutus.svg";
 import curved from "../../assets/col/curved.svg";
-import image3 from "../../assets/col/image-3.webp";
-import iphone from "../../assets/col/iphone.webp";
+import image3 from "../../assets/col/image-3.png";
+import iphone from "../../assets/col/iphone.png";
 import gunMetal from "../../assets/col/gunMetal.webp";
 import gunMetal2 from "../../assets/col/gunMetalalt.png";
-import Termos from "../../assets/col/Termos.webp";
-import rect11 from "../../assets/col/rect-11.webp";
-import rect12 from "../../assets/col/rect-12.webp";
+import Termos from "../../assets/col/Termos.png";
+import rect11 from "../../assets/col/rect-11.png";
+import rect12 from "../../assets/col/rect-12.png";
 
 import { staggerContainer, fadeIn } from "../../utils/motion";
 import { TypingHeading, NavDot, BlurImage } from "../../components";

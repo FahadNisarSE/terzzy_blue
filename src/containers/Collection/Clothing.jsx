@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-import sect54 from "../../assets/col/sect5-4.webp";
+import sect54 from "../../assets/col/sect5-4.png";
 
 // Logos of the brands
 import brand1 from "../../assets/col/brand1.svg";
@@ -13,12 +13,12 @@ import brand6 from "../../assets/col/brand6.svg";
 import brand7 from "../../assets/col/brand7.svg";
 
 // hoddies
-import hoodie1 from "../../assets/col/hoodie1.webp";
-import hoodie2 from "../../assets/col/hoodie2.webp";
-import hoodie3 from "../../assets/col/hoodie3.webp";
+import hoodie1 from "../../assets/col/hoodie1.png";
+import hoodie2 from "../../assets/col/hoodie2.png";
+import hoodie3 from "../../assets/col/hoodie3.png";
 
-import sect64 from "../../assets/col/sect6-4.webp";
-import sect65 from "../../assets/col/sect6-5.webp";
+import sect64 from "../../assets/col/sect6-4.png";
+import sect65 from "../../assets/col/sect6-5.png";
 import star from "../../assets/col/star.png";
 
 import { Characters } from ".";

@@ -13,13 +13,13 @@ import eighteen from '../18.webp';
 import twenty from '../20.webp';
 import twentyOne from '../21.webp';
 import twentyTwo from '../22.webp';
-import hoodie1 from '../hoddie_01.webp';
-import hoodie3 from '../hoddie_03.webp';
-import hoodie2 from '../hoodie_02.webp';
+import hoodie1 from '../col/hoodie1.png';
+import hoodie3 from '../col/hoodie3.png';
+import hoodie2 from '../col/hoodie2.png';
 import mannequin from '../mannequin_in_coat03_00.webp';
 import suit1 from '../si_1.webp';
 import suit2 from '../si_2.webp';
-import suit3 from '../si_3.webp';
+import suit3 from '../col/sect5-4.png';
 
 import prev from "./prev.svg"
 import next from "./next.svg"

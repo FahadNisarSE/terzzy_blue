@@ -20,14 +20,13 @@ import eighteen from './18.webp';
 import tweenty from './20.webp';
 import tweentyOne from './21.webp';
 import tweentyTwo from './22.webp';
-import hoddie1 from './hoddie_01.webp';
-import hoddie2 from './hoodie_02.webp';
-import hoddie3 from './hoddie_03.webp';
+import hoddie1 from './col/hoodie1.png';
+import hoddie2 from './col/hoodie2.png';
+import hoddie3 from './col/hoodie3.png';
 import mannequin from './mannequin_in_coat03_00.webp';
-import ren from './ren02.webp';
 import si from './si_1.webp';
 import si0 from './si_2.webp';
-import outfit from './si_3.webp';
+import outfit from './col/sect5-4.png';
 
 export {
     zero,
@@ -53,7 +52,6 @@ export {
     hoddie2,
     hoddie3,
     mannequin,
-    ren,
     si,
     si0,
     outfit,

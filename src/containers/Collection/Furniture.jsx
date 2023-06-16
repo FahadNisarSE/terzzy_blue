@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import sect33 from "../../assets/col/sect3-3.webp";
-import sect34 from "../../assets/col/sect3-4.webp";
+import sect33 from "../../assets/col/sect3-3.png";
+import sect34 from "../../assets/col/sect3-4.png";
 import sect32 from "../../assets/col/sect3-2.webp";
 import furnitureStar from "../../assets/col/furnitureStar.svg";
 import sect31 from "../../assets/col/sect3-1.webp";

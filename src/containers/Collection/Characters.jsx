@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-import character1 from "../../assets/col/character1.webp";
-import character2 from "../../assets/col/character2.webp";
-import character3 from "../../assets/col/character3.webp";
+import character1 from "../../assets/col/character1.png";
+import character2 from "../../assets/col/character2.png";
+import character3 from "../../assets/col/character3.png";
 
 import { staggerContainer, fadeIn } from "../../utils/motion";
 import { BlurImage, NavDot } from "../../components";
