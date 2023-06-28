@@ -110,7 +110,7 @@ const ComponentFaq = ({ active, setActive, setQuestionSection }) => {
                   <div
                     className={`${
                       index === selectedIndex ? "faqanswerin" : "faqanswerout"
-                    } bg-black text-white ml-auto sm:ml-0 mt-5 sm:mt-0 sm:absolute sm:bottom-[120px] right-5 w-[400px] max-h-[100px] text-xs p-4 rounded-xl rounded-br-none`}
+                    } bg-black text-white ml-auto sm:ml-0 mt-5 sm:mt-0 sm:absolute fixed sm:bottom-[120px] bottom-4 right-5 sm:w-[400px] sm:max-h-[100px] w-[90%] text-xs p-4 rounded-xl rounded-br-none`}
                   >
                     <p>{answer}</p>
                   </div>
@@ -216,7 +216,7 @@ export default function FAQ() {
           </div>
         </motion.main>
       ) : (
-        <div className="flex mb-auto sm:h-[83vh] my-auto sm:ml-8 sm:mr-0 mx-4">
+        <div className="flex sm:h-[83vh] my-auto sm:ml-8 sm:mr-0 mx-4 sm:mb-0 mb-52">
           <div className="w-full flex flex-col h-full">
             <ComponentFaq
               active={active}
