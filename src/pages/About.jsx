@@ -57,47 +57,47 @@ export default function About() {
       </div>
       <div className="sm:mb-auto flex border-x sm:mx-0 mx-auto my-auto sm:mr-0 mr-2 sm:h-[120px] h-[80px] border-gray-500 sm:pr-0 customer overflow-hidden">
         <div className="infinite-brand-scroll flex sm:gap-28 gap-12 items-center sm:justify-normal justify-between">
-          <div className="sm:h-[40px] sm:min-w-fit h-[20px]">
-            <BlurImage src={brand1} alt="brands-image" />
+          <div className="sm:h-[40px] sm:min-w-fit h-full flex items-center justify-center">
+            <img classname="w-full h-full object-contain" src={brand1} alt="brands-image" />
           </div>
-          <div className="sm:h-[40px] min-w-fit h-[20px]">
-            <BlurImage src={brand2} alt="brands-image" />
+          <div className="sm:h-[40px] min-w-fit h-full flex items-center justify-center">
+            <img classname="w-full h-full object-contain" src={brand2} alt="brands-image" />
           </div>
-          <div className="sm:h-[40px] min-w-fit h-[20px]">
-            <BlurImage src={brand3} alt="brands-image" />
+          <div className="sm:h-[40px] min-w-fit h-full flex items-center justify-center">
+            <img classname="w-full h-full object-contain" src={brand3} alt="brands-image" />
           </div>
-          <div className="sm:h-[40px] min-w-fit h-[20px]">
-            <BlurImage src={brand4} alt="brands-image" />
+          <div className="sm:h-[40px] min-w-fit h-full flex items-center justify-center">
+            <img classname="w-full h-full object-contain" src={brand4} alt="brands-image" />
           </div>
-          <div className="sm:h-[40px] min-w-fit h-[20px]">
-            <BlurImage src={brand5} alt="brands-image" />
+          <div className="sm:h-[40px] min-w-fit h-full flex items-center justify-center">
+            <img classname="w-full h-full object-contain" src={brand5} alt="brands-image" />
           </div>
-          <div className="sm:h-[40px] min-w-fit h-[20px]">
-            <BlurImage src={brand6} alt="brands-image" />
+          <div className="sm:h-[40px] min-w-fit h-full flex items-center justify-center">
+            <img classname="w-full h-full object-contain" src={brand6} alt="brands-image" />
           </div>
-          <div className="sm:h-[40px] min-w-fit h-[20px]">
-            <BlurImage src={brand7} alt="brands-image" />
+          <div className="sm:h-[40px] min-w-fit h-full flex items-center justify-center">
+            <img classname="w-full h-full object-contain" src={brand7} alt="brands-image" />
           </div>
-          <div className="sm:h-[40px] sm:min-w-fit h-[20px]">
-            <BlurImage src={brand1} alt="brands-image" />
+          <div className="sm:h-[40px] sm:min-w-fit h-full flex items-center justify-center">
+            <img classname="w-full h-full object-contain" src={brand1} alt="brands-image" />
           </div>
-          <div className="sm:h-[40px] min-w-fit h-[20px]">
-            <BlurImage src={brand2} alt="brands-image" />
+          <div className="sm:h-[40px] min-w-fit h-full flex items-center justify-center">
+            <img classname="w-full h-full object-contain" src={brand2} alt="brands-image" />
           </div>
-          <div className="sm:h-[40px] min-w-fit h-[20px]">
-            <BlurImage src={brand3} alt="brands-image" />
+          <div className="sm:h-[40px] min-w-fit h-full flex items-center justify-center">
+            <img classname="w-full h-full object-contain" src={brand3} alt="brands-image" />
           </div>
-          <div className="sm:h-[40px] min-w-fit h-[20px]">
-            <BlurImage src={brand4} alt="brands-image" />
+          <div className="sm:h-[40px] min-w-fit h-full flex items-center justify-center">
+            <img classname="w-full h-full object-contain" src={brand4} alt="brands-image" />
           </div>
-          <div className="sm:h-[40px] min-w-fit h-[20px]">
-            <BlurImage src={brand5} alt="brands-image" />
+          <div className="sm:h-[40px] min-w-fit h-full flex items-center justify-center">
+            <img classname="w-full h-full object-contain" src={brand5} alt="brands-image" />
           </div>
-          <div className="sm:h-[40px] min-w-fit h-[20px]">
-            <BlurImage src={brand6} alt="brands-image" />
+          <div className="sm:h-[40px] min-w-fit h-full flex items-center justify-center">
+            <img classname="w-full h-full object-contain" src={brand6} alt="brands-image" />
           </div>
-          <div className="sm:h-[40px] min-w-fit h-[20px]">
-            <BlurImage src={brand7} alt="brands-image" />
+          <div className="sm:h-[40px] min-w-fit h-full flex items-center justify-center">
+            <img classname="w-full h-full object-contain" src={brand7} alt="brands-image" />
           </div>
         </div>
       </div>
